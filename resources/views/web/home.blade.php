@@ -1,6 +1,6 @@
 @extends('layouts.public')
 
-@section('title', __('home.meta_title'))
+@section('title', 'KK-BOOST REMAPPING')
 @section('meta_description', __('home.meta_description'))
 
 @section('head')
@@ -1213,7 +1213,7 @@
             </div>
 
             <h2 class="mt-6 text-4xl font-bold leading-tight tracking-[-0.03em] text-white sm:text-[2.6rem]">
-                {{ app()->getLocale() === 'de' ? 'Viele zufriedene Kunden und ein Auftritt, der Vertrauen schafft' : 'Many satisfied clients and a presence that builds trust' }}
+               {{ app()->getLocale() === 'de' ? 'Vertrauen, das durch starke Ergebnisse und saubere Abläufe entsteht' : 'Trust built through strong results and clean processes' }}
             </h2>
 
             <p class="mt-4 max-w-3xl text-base leading-8 text-slate-400">
@@ -1304,42 +1304,45 @@
                 </div>
             </div>
 
-            <div class="grid gap-6 lg:grid-cols-3">
-                <template x-for="(card, index) in visibleCards()" :key="active + '-' + index">
-                    <div
-                        x-transition:enter="transition ease-out duration-500"
-                        x-transition:enter-start="opacity-0 translate-y-3 scale-[0.985]"
-                        x-transition:enter-end="opacity-100 translate-y-0 scale-100"
-                        x-transition:leave="transition ease-in duration-250"
-                        x-transition:leave-start="opacity-100 translate-y-0 scale-100"
-                        x-transition:leave-end="opacity-0 translate-y-2 scale-[0.985]"
-                        class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-7 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_45px_rgba(239,68,68,0.08)]"
-                    >
-                        <div class="mb-5 flex items-center justify-between gap-4">
-                            <div class="flex items-center gap-1 text-red-400">
-                                <span>★</span>
-                                <span>★</span>
-                                <span>★</span>
-                                <span>★</span>
-                                <span>★</span>
-                            </div>
-
-                            <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-400">
-                                {{ app()->getLocale() === 'de' ? 'Feedback' : 'Feedback' }}
-                            </div>
-                        </div>
-
-                        <p class="text-base leading-8 text-slate-300" x-text="'“' + card.quote + '”'"></p>
-
-                        <div class="mt-6 border-t border-white/10 pt-4">
-                            <div class="text-sm font-semibold text-white" x-text="card.role"></div>
-                            <div class="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">
-                                {{ app()->getLocale() === 'de' ? 'Professioneller Eindruck' : 'Professional impression' }}
-                            </div>
-                        </div>
+            
+            <div class="kk-review-grid grid gap-6 lg:grid-cols-3">
+    <template x-for="(card, index) in visibleCards()" :key="active + '-' + index">
+        <div
+            x-transition:enter="transition ease-out duration-500"
+            x-transition:enter-start="opacity-0 translate-y-3 scale-[0.985]"
+            x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+            x-transition:leave-end="opacity-0 translate-y-2 scale-[0.985]"
+            class="kk-review-card rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-7 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_45px_rgba(239,68,68,0.08)]"
+        >
+            <div class="kk-review-card-body">
+                <div class="mb-5 flex items-center justify-between gap-4">
+                    <div class="flex items-center gap-1 text-red-400">
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
+                        <span>★</span>
                     </div>
-                </template>
+
+                    <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                        {{ app()->getLocale() === 'de' ? 'Feedback' : 'Feedback' }}
+                    </div>
+                </div>
+
+                <p class="text-base leading-8 text-slate-300" x-text="'“' + card.quote + '”'"></p>
             </div>
+
+            <div class="kk-review-card-footer border-t border-white/10 pt-4">
+                <div class="text-sm font-semibold text-white" x-text="card.role"></div>
+                <div class="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">
+                    {{ app()->getLocale() === 'de' ? 'Professioneller Eindruck' : 'Professional impression' }}
+                </div>
+            </div>
+        </div>
+    </template>
+</div>
 
             <div class="mt-6 flex items-center justify-center gap-2">
                 <template x-for="(card, index) in cards" :key="'dot-' + index">
