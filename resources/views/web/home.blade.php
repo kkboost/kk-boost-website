@@ -1399,7 +1399,7 @@
                         </div>
                     </div>
 
-                    <p class="text-base leading-8 text-slate-300" x-text="'“' + card.quote + '”'"></p>
+                    <p class="kk-review-quote text-base leading-8 text-slate-300" x-text="'“' + card.quote + '”'"></p>
                 </div>
 
                 <div class="kk-review-card-footer border-t border-white/10 pt-4">
