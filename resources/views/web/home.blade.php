@@ -367,58 +367,58 @@
             0 0 0 1px rgba(255,255,255,0.03);
     }
 
-    .kk-review-slider {
-        min-height: 540px;
-    }
+   .kk-review-slider {
+    min-height: 660px;
+}
 
-    .kk-review-grid {
-        align-items: stretch;
+.kk-review-grid {
+    align-items: stretch;
+}
+
+.kk-review-card {
+    min-height: 470px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.028) 44%, rgba(239,68,68,0.022));
+    box-shadow:
+        0 24px 64px rgba(0, 0, 0, 0.24),
+        0 0 0 1px rgba(255,255,255,0.03),
+        inset 0 1px 0 rgba(255,255,255,0.03);
+}
+
+.kk-review-card-body {
+    flex: 1 1 auto;
+}
+
+.kk-review-card-footer {
+    margin-top: auto;
+}
+
+.kk-review-card p {
+    text-wrap: pretty;
+}
+
+@media (max-width: 1023px) {
+    .kk-review-slider {
+        min-height: 430px;
     }
 
     .kk-review-card {
-        min-height: 390px;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        background:
-            linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.028) 44%, rgba(239,68,68,0.022));
-        box-shadow:
-            0 24px 64px rgba(0, 0, 0, 0.24),
-            0 0 0 1px rgba(255,255,255,0.03),
-            inset 0 1px 0 rgba(255,255,255,0.03);
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 639px) {
+    .kk-review-slider {
+        min-height: 400px;
     }
 
-    .kk-review-card-body {
-        flex: 1 1 auto;
+    .kk-review-card {
+        min-height: 320px;
     }
-
-    .kk-review-card-footer {
-        margin-top: auto;
-    }
-
-    .kk-review-card p {
-        text-wrap: pretty;
-    }
-
-    @media (max-width: 1023px) {
-        .kk-review-slider {
-            min-height: 390px;
-        }
-
-        .kk-review-card {
-            min-height: 310px;
-        }
-    }
-
-    @media (max-width: 639px) {
-        .kk-review-slider {
-            min-height: 370px;
-        }
-
-        .kk-review-card {
-            min-height: 290px;
-        }
-    }
+}
 </style>
 @endsection
 
