@@ -48,325 +48,378 @@
         {!! json_encode($serviceSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT) !!}
     </script>
 
-        <style>
-        @keyframes kkFloatSlow {
-            0%, 100% {
-                transform: translate3d(0, 0, 0);
-            }
-            50% {
-                transform: translate3d(0, -6px, 0);
-            }
+<style>
+    @keyframes kkFloatSlow {
+        0%, 100% {
+            transform: translate3d(0, 0, 0);
         }
-
-        @keyframes kkGlowPulse {
-            0%, 100% {
-                opacity: 0.55;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.9;
-                transform: scale(1.06);
-            }
+        50% {
+            transform: translate3d(0, -6px, 0);
         }
+    }
 
-        @keyframes kkShimmer {
-            0% {
-                transform: translateX(-120%);
-                opacity: 0;
-            }
-            20% {
-                opacity: 0.22;
-            }
-            100% {
-                transform: translateX(120%);
-                opacity: 0;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation: none !important;
-                transition: none !important;
-                scroll-behavior: auto !important;
-            }
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        section {
-            position: relative;
-        }
-
-        section .rounded-\[1\.75rem\],
-        section .rounded-\[1\.6rem\],
-        section .rounded-\[1\.9rem\],
-        section .rounded-\[2rem\],
-        section .rounded-\[1\.4rem\],
-        section .rounded-2xl,
-        section .rounded-3xl,
-        section .rounded-\[1\.5rem\] {
-            transition:
-                transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
-                border-color 320ms ease,
-                box-shadow 420ms cubic-bezier(0.22, 1, 0.36, 1),
-                background-color 320ms ease,
-                opacity 320ms ease;
-            will-change: transform, box-shadow;
-        }
-
-        section .rounded-\[1\.75rem\]:hover,
-        section .rounded-\[1\.6rem\]:hover,
-        section .rounded-\[1\.9rem\]:hover,
-        section .rounded-\[2rem\]:hover,
-        section .rounded-\[1\.4rem\]:hover,
-        section .rounded-2xl:hover,
-        section .rounded-3xl:hover,
-        section .rounded-\[1\.5rem\]:hover {
-            box-shadow:
-                0 24px 70px rgba(0, 0, 0, 0.30),
-                0 0 0 1px rgba(255, 255, 255, 0.035),
-                0 0 40px rgba(239, 68, 68, 0.07);
-        }
-
-        section a.inline-flex,
-        section button,
-        .fixed a.inline-flex,
-        .fixed button {
-            position: relative;
-            transition:
-                transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 320ms ease,
-                background-color 260ms ease,
-                border-color 260ms ease,
-                color 260ms ease,
-                opacity 260ms ease;
-            will-change: transform, box-shadow;
-        }
-
-        section a.inline-flex:hover,
-        section button:hover,
-        .fixed a.inline-flex:hover,
-        .fixed button:hover {
-            transform: translateY(-1px);
-        }
-
-        section a.inline-flex:active,
-        section button:active,
-        .fixed a.inline-flex:active,
-        .fixed button:active {
-            transform: translateY(0) scale(0.985);
-        }
-
-        section a.inline-flex:focus-visible,
-        section button:focus-visible,
-        .fixed a.inline-flex:focus-visible,
-        .fixed button:focus-visible {
-            outline: none;
-            box-shadow:
-                0 0 0 1px rgba(255, 255, 255, 0.06),
-                0 0 0 4px rgba(239, 68, 68, 0.16),
-                0 16px 36px rgba(0, 0, 0, 0.22);
-        }
-
-        section a.bg-gradient-to-r.from-red-600,
-        .fixed a.bg-gradient-to-r.from-red-600,
-        .fixed button.border-green-400\/16,
-        .fixed button.border-green-400\/18 {
-            overflow: hidden;
-            isolation: isolate;
-        }
-
-        section a.bg-gradient-to-r.from-red-600::after,
-        .fixed a.bg-gradient-to-r.from-red-600::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(115deg, transparent 18%, rgba(255,255,255,0.18) 50%, transparent 82%);
-            transform: translateX(-120%);
-            transition: transform 0ms;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        section a.bg-gradient-to-r.from-red-600:hover::after,
-        .fixed a.bg-gradient-to-r.from-red-600:hover::after {
-            animation: kkShimmer 1.25s ease;
-        }
-
-        section a.bg-gradient-to-r.from-red-600 > *,
-        .fixed a.bg-gradient-to-r.from-red-600 > * {
-            position: relative;
-            z-index: 1;
-        }
-
-        .kk-status-active,
-        .kk-status-inactive {
-            backdrop-filter: blur(12px);
-        }
-
-        .kk-status-dot-active {
-            animation: kkGlowPulse 1.9s ease-in-out infinite;
-        }
-
-        .group img,
-        img {
-            transition:
-                transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
-                filter 420ms ease,
-                opacity 320ms ease;
-        }
-
-        .group:hover img {
-            filter: saturate(1.04) contrast(1.03);
-        }
-
-        .sticky.top-28 {
-            transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease;
-        }
-
-        .sticky.top-28:hover {
-            transform: translateY(-2px);
-            box-shadow:
-                0 26px 75px rgba(0, 0, 0, 0.34),
-                0 0 48px rgba(239, 68, 68, 0.08);
-        }
-
-        .kk-grid-premium,
-        .kk-grid-premium-soft {
-            mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 88%, transparent);
-        }
-
-        .absolute.-inset-6.rounded-\[2rem\].bg-red-600\/10.blur-3xl,
-        .absolute.-inset-4.rounded-\[2rem\].bg-red-600\/10.blur-3xl {
-            animation: kkFloatSlow 7.5s ease-in-out infinite;
-        }
-
-        .shadow-\[0_24px_90px_rgba\(0\,0\,0\,0\.40\)\] {
-            box-shadow:
-                0 30px 110px rgba(0, 0, 0, 0.42),
-                0 0 0 1px rgba(255,255,255,0.035),
-                inset 0 1px 0 rgba(255,255,255,0.03) !important;
-        }
-
-        .shadow-\[0_20px_70px_rgba\(0\,0\,0\,0\.30\)\] {
-            box-shadow:
-                0 24px 85px rgba(0, 0, 0, 0.34),
-                0 0 0 1px rgba(255,255,255,0.03),
-                inset 0 1px 0 rgba(255,255,255,0.025) !important;
-        }
-
-        .shadow-\[0_0_50px_rgba\(239\,68\,68\,0\.05\)\],
-        .shadow-\[0_0_45px_rgba\(239\,68\,68\,0\.08\)\],
-        .shadow-\[0_0_35px_rgba\(239\,68\,68\,0\.03\)\],
-        .shadow-\[0_0_40px_rgba\(239\,68\,68\,0\.03\)\] {
-            box-shadow:
-                0 22px 64px rgba(0, 0, 0, 0.24),
-                0 0 42px rgba(239, 68, 68, 0.065),
-                0 0 0 1px rgba(255,255,255,0.03) !important;
-        }
-
-        .text-red-500.drop-shadow-\[0_0_18px_rgba\(239\,68\,68\,0\.35\)\] {
-            text-shadow:
-                0 0 22px rgba(239, 68, 68, 0.34),
-                0 0 44px rgba(239, 68, 68, 0.12);
-        }
-
-        .backdrop-blur-xl,
-        .backdrop-blur-2xl,
-        .backdrop-blur-md,
-        .backdrop-blur-lg {
-            -webkit-backdrop-filter: blur(18px);
-            backdrop-filter: blur(18px);
-        }
-
-        .grid.gap-6.lg\:grid-cols-3 > *,
-        .grid.gap-6.md\:grid-cols-3 > *,
-        .grid.gap-6.md\:grid-cols-2 > *,
-        .grid.gap-5.md\:grid-cols-2 > *,
-        .grid.gap-5.md\:grid-cols-2.xl\:grid-cols-3 > *,
-        .grid.gap-6.md\:grid-cols-2.xl\:grid-cols-4 > *,
-        .grid.gap-6.md\:grid-cols-2.xl\:grid-cols-4 > *,
-        .grid.gap-8.md\:grid-cols-3 > * {
-            position: relative;
-        }
-
-        .grid.gap-6.lg\:grid-cols-3 > *::before,
-        .grid.gap-6.md\:grid-cols-3 > *::before,
-        .grid.gap-6.md\:grid-cols-2 > *::before,
-        .grid.gap-5.md\:grid-cols-2 > *::before,
-        .grid.gap-5.md\:grid-cols-2.xl\:grid-cols-3 > *::before,
-        .grid.gap-6.md\:grid-cols-2.xl\:grid-cols-4 > *::before,
-        .grid.gap-8.md\:grid-cols-3 > *::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            padding: 1px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.01) 28%, rgba(239,68,68,0.05) 100%);
-            -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
+    @keyframes kkGlowPulse {
+        0%, 100% {
             opacity: 0.55;
+            transform: scale(1);
         }
-
-        .grid.gap-6.lg\:grid-cols-3 > *:hover::before,
-        .grid.gap-6.md\:grid-cols-3 > *:hover::before,
-        .grid.gap-6.md\:grid-cols-2 > *:hover::before,
-        .grid.gap-5.md\:grid-cols-2 > *:hover::before,
-        .grid.gap-5.md\:grid-cols-2.xl\:grid-cols-3 > *:hover::before,
-        .grid.gap-6.md\:grid-cols-2.xl\:grid-cols-4 > *:hover::before,
-        .grid.gap-8.md\:grid-cols-3 > *:hover::before {
+        50% {
             opacity: 0.9;
+            transform: scale(1.06);
+        }
+    }
+
+    @keyframes kkShimmer {
+        0% {
+            transform: translateX(-120%);
+            opacity: 0;
+        }
+        20% {
+            opacity: 0.22;
+        }
+        100% {
+            transform: translateX(120%);
+            opacity: 0;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation: none !important;
+            transition: none !important;
+            scroll-behavior: auto !important;
+        }
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    section {
+        position: relative;
+    }
+
+    section .rounded-\[1\.75rem\],
+    section .rounded-\[1\.6rem\],
+    section .rounded-\[1\.9rem\],
+    section .rounded-\[2rem\],
+    section .rounded-\[1\.4rem\],
+    section .rounded-2xl,
+    section .rounded-3xl,
+    section .rounded-\[1\.5rem\] {
+        transition:
+            transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+            border-color 320ms ease,
+            box-shadow 420ms cubic-bezier(0.22, 1, 0.36, 1),
+            background-color 320ms ease,
+            opacity 320ms ease;
+        will-change: transform, box-shadow;
+    }
+
+    section .rounded-\[1\.75rem\]:hover,
+    section .rounded-\[1\.6rem\]:hover,
+    section .rounded-\[1\.9rem\]:hover,
+    section .rounded-\[2rem\]:hover,
+    section .rounded-\[1\.4rem\]:hover,
+    section .rounded-2xl:hover,
+    section .rounded-3xl:hover,
+    section .rounded-\[1\.5rem\]:hover {
+        box-shadow:
+            0 24px 70px rgba(0, 0, 0, 0.30),
+            0 0 0 1px rgba(255, 255, 255, 0.035),
+            0 0 40px rgba(239, 68, 68, 0.07);
+    }
+
+    section a.inline-flex,
+    section button,
+    .fixed a.inline-flex,
+    .fixed button {
+        position: relative;
+        transition:
+            transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 320ms ease,
+            background-color 260ms ease,
+            border-color 260ms ease,
+            color 260ms ease,
+            opacity 260ms ease;
+        will-change: transform, box-shadow;
+    }
+
+    section a.inline-flex:hover,
+    section button:hover,
+    .fixed a.inline-flex:hover,
+    .fixed button:hover {
+        transform: translateY(-1px);
+    }
+
+    section a.inline-flex:active,
+    section button:active,
+    .fixed a.inline-flex:active,
+    .fixed button:active {
+        transform: translateY(0) scale(0.985);
+    }
+
+    section a.inline-flex:focus-visible,
+    section button:focus-visible,
+    .fixed a.inline-flex:focus-visible,
+    .fixed button:focus-visible {
+        outline: none;
+        box-shadow:
+            0 0 0 1px rgba(255, 255, 255, 0.06),
+            0 0 0 4px rgba(239, 68, 68, 0.16),
+            0 16px 36px rgba(0, 0, 0, 0.22);
+    }
+
+    section a.bg-gradient-to-r.from-red-600,
+    .fixed a.bg-gradient-to-r.from-red-600,
+    .fixed button.border-green-400\/16,
+    .fixed button.border-green-400\/18 {
+        overflow: hidden;
+        isolation: isolate;
+    }
+
+    section a.bg-gradient-to-r.from-red-600::after,
+    .fixed a.bg-gradient-to-r.from-red-600::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(115deg, transparent 18%, rgba(255,255,255,0.18) 50%, transparent 82%);
+        transform: translateX(-120%);
+        transition: transform 0ms;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    section a.bg-gradient-to-r.from-red-600:hover::after,
+    .fixed a.bg-gradient-to-r.from-red-600:hover::after {
+        animation: kkShimmer 1.25s ease;
+    }
+
+    section a.bg-gradient-to-r.from-red-600 > *,
+    .fixed a.bg-gradient-to-r.from-red-600 > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .kk-status-active,
+    .kk-status-inactive {
+        backdrop-filter: blur(12px);
+    }
+
+    .kk-status-dot-active {
+        animation: kkGlowPulse 1.9s ease-in-out infinite;
+    }
+
+    .group img,
+    img {
+        transition:
+            transform 700ms cubic-bezier(0.22, 1, 0.36, 1),
+            filter 420ms ease,
+            opacity 320ms ease;
+    }
+
+    .group:hover img {
+        filter: saturate(1.04) contrast(1.03);
+    }
+
+    .sticky.top-28 {
+        transition: transform 320ms ease, box-shadow 320ms ease, border-color 320ms ease;
+    }
+
+    .sticky.top-28:hover {
+        transform: translateY(-2px);
+        box-shadow:
+            0 26px 75px rgba(0, 0, 0, 0.34),
+            0 0 48px rgba(239, 68, 68, 0.08);
+    }
+
+    .kk-grid-premium,
+    .kk-grid-premium-soft {
+        mask-image: linear-gradient(to bottom, transparent, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 88%, transparent);
+    }
+
+    .absolute.-inset-6.rounded-\[2rem\].bg-red-600\/10.blur-3xl,
+    .absolute.-inset-4.rounded-\[2rem\].bg-red-600\/10.blur-3xl {
+        animation: kkFloatSlow 7.5s ease-in-out infinite;
+    }
+
+    .shadow-\[0_24px_90px_rgba\(0\,0\,0\,0\.40\)\] {
+        box-shadow:
+            0 30px 110px rgba(0, 0, 0, 0.42),
+            0 0 0 1px rgba(255,255,255,0.035),
+            inset 0 1px 0 rgba(255,255,255,0.03) !important;
+    }
+
+    .shadow-\[0_20px_70px_rgba\(0\,0\,0\,0\.30\)\] {
+        box-shadow:
+            0 24px 85px rgba(0, 0, 0, 0.34),
+            0 0 0 1px rgba(255,255,255,0.03),
+            inset 0 1px 0 rgba(255,255,255,0.025) !important;
+    }
+
+    .shadow-\[0_0_50px_rgba\(239\,68\,68\,0\.05\)\],
+    .shadow-\[0_0_45px_rgba\(239\,68\,68\,0\.08\)\],
+    .shadow-\[0_0_35px_rgba\(239\,68\,68\,0\.03\)\],
+    .shadow-\[0_0_40px_rgba\(239\,68\,68\,0\.03\)\] {
+        box-shadow:
+            0 22px 64px rgba(0, 0, 0, 0.24),
+            0 0 42px rgba(239, 68, 68, 0.065),
+            0 0 0 1px rgba(255,255,255,0.03) !important;
+    }
+
+    .text-red-500.drop-shadow-\[0_0_18px_rgba\(239\,68\,68\,0\.35\)\] {
+        text-shadow:
+            0 0 22px rgba(239, 68, 68, 0.34),
+            0 0 44px rgba(239, 68, 68, 0.12);
+    }
+
+    .backdrop-blur-xl,
+    .backdrop-blur-2xl,
+    .backdrop-blur-md,
+    .backdrop-blur-lg {
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+    }
+
+    .grid.gap-6.lg\:grid-cols-3 > *,
+    .grid.gap-6.md\:grid-cols-3 > *,
+    .grid.gap-6.md\:grid-cols-2 > *,
+    .grid.gap-5.md\:grid-cols-2 > *,
+    .grid.gap-5.md\:grid-cols-2.xl\:grid-cols-3 > *,
+    .grid.gap-6.md\:grid-cols-2.xl\:grid-cols-4 > *,
+    .grid.gap-6.md\:grid-cols-2.xl\:grid-cols-4 > *,
+    .grid.gap-8.md\:grid-cols-3 > * {
+        position: relative;
+    }
+
+    .grid.gap-6.lg\:grid-cols-3 > *::before,
+    .grid.gap-6.md\:grid-cols-3 > *::before,
+    .grid.gap-6.md\:grid-cols-2 > *::before,
+    .grid.gap-5.md\:grid-cols-2 > *::before,
+    .grid.gap-5.md\:grid-cols-2.xl\:grid-cols-3 > *::before,
+    .grid.gap-6.md\:grid-cols-2.xl\:grid-cols-4 > *::before,
+    .grid.gap-8.md\:grid-cols-3 > *::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.065), rgba(255,255,255,0.01) 28%, rgba(239,68,68,0.05) 100%);
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        opacity: 0.55;
+    }
+
+    .grid.gap-6.lg\:grid-cols-3 > *:hover::before,
+    .grid.gap-6.md\:grid-cols-3 > *:hover::before,
+    .grid.gap-6.md\:grid-cols-2 > *:hover::before,
+    .grid.gap-5.md\:grid-cols-2 > *:hover::before,
+    .grid.gap-5.md\:grid-cols-2.xl\:grid-cols-3 > *:hover::before,
+    .grid.gap-6.md\:grid-cols-2.xl\:grid-cols-4 > *:hover::before,
+    .grid.gap-8.md\:grid-cols-3 > *:hover::before {
+        opacity: 0.9;
+    }
+
+    .mt-8.grid.gap-3.sm\:grid-cols-3 > div,
+    .mt-8.grid.gap-3.sm\:grid-cols-2 > div,
+    .mt-6.grid.gap-4.sm\:grid-cols-2 > div,
+    .mt-5.space-y-3 > div,
+    .mt-6.grid.gap-3.sm\:grid-cols-2 > a,
+    .mt-7.flex.flex-col.gap-3 > a,
+    .mt-6.grid.gap-3 > div {
+        transition:
+            transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+            box-shadow 320ms ease,
+            border-color 260ms ease,
+            background-color 260ms ease;
+    }
+
+    .mt-8.grid.gap-3.sm\:grid-cols-3 > div:hover,
+    .mt-8.grid.gap-3.sm\:grid-cols-2 > div:hover,
+    .mt-6.grid.gap-4.sm\:grid-cols-2 > div:hover,
+    .mt-5.space-y-3 > div:hover,
+    .mt-6.grid.gap-3 > div:hover {
+        transform: translateY(-2px);
+        box-shadow:
+            0 18px 46px rgba(0, 0, 0, 0.22),
+            0 0 28px rgba(239, 68, 68, 0.06);
+    }
+
+    .pointer-events-none.absolute.inset-x-0.bottom-8 a {
+        box-shadow:
+            0 10px 28px rgba(0, 0, 0, 0.18),
+            inset 0 1px 0 rgba(255,255,255,0.035);
+    }
+
+    .pointer-events-none.absolute.inset-x-0.bottom-8 a:hover {
+        transform: translateY(-2px);
+        box-shadow:
+            0 16px 38px rgba(0, 0, 0, 0.24),
+            0 0 24px rgba(239, 68, 68, 0.08);
+    }
+
+    .fixed.inset-x-0.bottom-5 .overflow-hidden.rounded-\[1\.75rem\],
+    .fixed.inset-x-0.bottom-0 {
+        box-shadow:
+            0 18px 55px rgba(0,0,0,0.28),
+            0 0 0 1px rgba(255,255,255,0.03);
+    }
+
+    .kk-review-slider {
+        min-height: 540px;
+    }
+
+    .kk-review-grid {
+        align-items: stretch;
+    }
+
+    .kk-review-card {
+        min-height: 390px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        background:
+            linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.028) 44%, rgba(239,68,68,0.022));
+        box-shadow:
+            0 24px 64px rgba(0, 0, 0, 0.24),
+            0 0 0 1px rgba(255,255,255,0.03),
+            inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    .kk-review-card-body {
+        flex: 1 1 auto;
+    }
+
+    .kk-review-card-footer {
+        margin-top: auto;
+    }
+
+    .kk-review-card p {
+        text-wrap: pretty;
+    }
+
+    @media (max-width: 1023px) {
+        .kk-review-slider {
+            min-height: 390px;
         }
 
-        .mt-8.grid.gap-3.sm\:grid-cols-3 > div,
-        .mt-8.grid.gap-3.sm\:grid-cols-2 > div,
-        .mt-6.grid.gap-4.sm\:grid-cols-2 > div,
-        .mt-5.space-y-3 > div,
-        .mt-6.grid.gap-3.sm\:grid-cols-2 > a,
-        .mt-7.flex.flex-col.gap-3 > a,
-        .mt-6.grid.gap-3 > div {
-            transition:
-                transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 320ms ease,
-                border-color 260ms ease,
-                background-color 260ms ease;
+        .kk-review-card {
+            min-height: 310px;
+        }
+    }
+
+    @media (max-width: 639px) {
+        .kk-review-slider {
+            min-height: 370px;
         }
 
-        .mt-8.grid.gap-3.sm\:grid-cols-3 > div:hover,
-        .mt-8.grid.gap-3.sm\:grid-cols-2 > div:hover,
-        .mt-6.grid.gap-4.sm\:grid-cols-2 > div:hover,
-        .mt-5.space-y-3 > div:hover,
-        .mt-6.grid.gap-3 > div:hover {
-            transform: translateY(-2px);
-            box-shadow:
-                0 18px 46px rgba(0, 0, 0, 0.22),
-                0 0 28px rgba(239, 68, 68, 0.06);
+        .kk-review-card {
+            min-height: 290px;
         }
-
-        .pointer-events-none.absolute.inset-x-0.bottom-8 a {
-            box-shadow:
-                0 10px 28px rgba(0, 0, 0, 0.18),
-                inset 0 1px 0 rgba(255,255,255,0.035);
-        }
-
-        .pointer-events-none.absolute.inset-x-0.bottom-8 a:hover {
-            transform: translateY(-2px);
-            box-shadow:
-                0 16px 38px rgba(0, 0, 0, 0.24),
-                0 0 24px rgba(239, 68, 68, 0.08);
-        }
-
-        .fixed.inset-x-0.bottom-5 .overflow-hidden.rounded-\[1\.75rem\],
-        .fixed.inset-x-0.bottom-0 {
-            box-shadow:
-                0 18px 55px rgba(0,0,0,0.28),
-                0 0 0 1px rgba(255,255,255,0.03);
-        }
-    </style>
+    }
+</style>
 @endsection
 
 @section('content')
@@ -1218,8 +1271,8 @@
 
             <p class="mt-4 max-w-3xl text-base leading-8 text-slate-400">
                 {{ app()->getLocale() === 'de'
-                    ? 'Ein hochwertiger Fileservice überzeugt nicht nur technisch, sondern auch durch klare Kommunikation, saubere Prozesse und konstant professionelle Ergebnisse.'
-                    : 'A premium file service proves itself not only technically, but also through clear communication, clean processes and consistently professional results.' }}
+    ? 'Professionelle Kommunikation, ruhige Abläufe und ein hochwertiger Gesamteindruck sorgen dafür, dass Vertrauen nicht behauptet, sondern spürbar aufgebaut wird.'
+    : 'Professional communication, calm workflows and a premium overall impression help build trust in a way that feels tangible rather than claimed.' }}
             </p>
         </div>
 
@@ -1232,130 +1285,129 @@
             @endforeach
         </div>
 
-        <div
-            class="mt-8"
-            x-data="{
-                active: 0,
-                cards: @js($socialProofCards),
-                visibleDesktop: 3,
-                visibleMobile: 1,
-                interval: null,
-                get visibleCount() {
-                    return window.innerWidth >= 1024 ? this.visibleDesktop : this.visibleMobile;
-                },
-                next() {
-                    this.active = (this.active + 1) % this.cards.length;
-                },
-                prev() {
-                    this.active = (this.active - 1 + this.cards.length) % this.cards.length;
-                },
-                visibleCards() {
-                    let output = [];
-                    for (let i = 0; i < this.visibleCount; i++) {
-                        output.push(this.cards[(this.active + i) % this.cards.length]);
-                    }
-                    return output;
-                },
-                startRotation() {
-                    this.stopRotation();
-                    this.interval = setInterval(() => {
-                        this.next();
-                    }, 4500);
-                },
-                stopRotation() {
-                    if (this.interval) {
-                        clearInterval(this.interval);
-                        this.interval = null;
-                    }
-                },
-                init() {
-                    this.startRotation();
-                    window.addEventListener('resize', () => {
-                        this.active = this.active % this.cards.length;
-                    });
-                }
-            }"
-            @mouseenter="stopRotation()"
-            @mouseleave="startRotation()"
-        >
-            <div class="mb-6 flex items-center justify-between gap-4">
-                <div class="text-sm uppercase tracking-[0.22em] text-slate-500">
-                    {{ app()->getLocale() === 'de' ? 'Rezensionen & Eindrücke' : 'Reviews & Insights' }}
-                </div>
-
-                <div class="flex items-center gap-3">
-                    <button
-                        type="button"
-                        @click="prev()"
-                        class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]"
-                        aria-label="Previous testimonial"
-                    >
-                        <span>&larr;</span>
-                    </button>
-
-                    <button
-                        type="button"
-                        @click="next()"
-                        class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]"
-                        aria-label="Next testimonial"
-                    >
-                        <span>&rarr;</span>
-                    </button>
-                </div>
-            </div>
-
-            
-            <div class="kk-review-grid grid gap-6 lg:grid-cols-3">
-    <template x-for="(card, index) in visibleCards()" :key="active + '-' + index">
-        <div
-            x-transition:enter="transition ease-out duration-500"
-            x-transition:enter-start="opacity-0 translate-y-3 scale-[0.985]"
-            x-transition:enter-end="opacity-100 translate-y-0 scale-100"
-            x-transition:leave="transition ease-in duration-250"
-            x-transition:leave-start="opacity-100 translate-y-0 scale-100"
-            x-transition:leave-end="opacity-0 translate-y-2 scale-[0.985]"
-            class="kk-review-card rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-7 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_45px_rgba(239,68,68,0.08)]"
-        >
-            <div class="kk-review-card-body">
-                <div class="mb-5 flex items-center justify-between gap-4">
-                    <div class="flex items-center gap-1 text-red-400">
-                        <span>★</span>
-                        <span>★</span>
-                        <span>★</span>
-                        <span>★</span>
-                        <span>★</span>
-                    </div>
-
-                    <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-400">
-                        {{ app()->getLocale() === 'de' ? 'Feedback' : 'Feedback' }}
-                    </div>
-                </div>
-
-                <p class="text-base leading-8 text-slate-300" x-text="'“' + card.quote + '”'"></p>
-            </div>
-
-            <div class="kk-review-card-footer border-t border-white/10 pt-4">
-                <div class="text-sm font-semibold text-white" x-text="card.role"></div>
-                <div class="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">
-                    {{ app()->getLocale() === 'de' ? 'Professioneller Eindruck' : 'Professional impression' }}
-                </div>
-            </div>
+       <div
+    class="kk-review-slider mt-8"
+    x-data="{
+        active: 0,
+        cards: @js($socialProofCards),
+        visibleDesktop: 3,
+        visibleMobile: 1,
+        interval: null,
+        get visibleCount() {
+            return window.innerWidth >= 1024 ? this.visibleDesktop : this.visibleMobile;
+        },
+        next() {
+            this.active = (this.active + 1) % this.cards.length;
+        },
+        prev() {
+            this.active = (this.active - 1 + this.cards.length) % this.cards.length;
+        },
+        visibleCards() {
+            let output = [];
+            for (let i = 0; i < this.visibleCount; i++) {
+                output.push(this.cards[(this.active + i) % this.cards.length]);
+            }
+            return output;
+        },
+        startRotation() {
+            this.stopRotation();
+            this.interval = setInterval(() => {
+                this.next();
+            }, 5200);
+        },
+        stopRotation() {
+            if (this.interval) {
+                clearInterval(this.interval);
+                this.interval = null;
+            }
+        },
+        init() {
+            this.startRotation();
+            window.addEventListener('resize', () => {
+                this.active = this.active % this.cards.length;
+            });
+        }
+    }"
+    @mouseenter="stopRotation()"
+    @mouseleave="startRotation()"
+>
+    <div class="mb-6 flex items-center justify-between gap-4">
+        <div class="text-sm uppercase tracking-[0.22em] text-slate-500">
+            {{ app()->getLocale() === 'de' ? 'Rezensionen & Eindrücke' : 'Reviews & Insights' }}
         </div>
-    </template>
+
+        <div class="flex items-center gap-3">
+            <button
+                type="button"
+                @click="prev()"
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]"
+                aria-label="Previous testimonial"
+            >
+                <span>&larr;</span>
+            </button>
+
+            <button
+                type="button"
+                @click="next()"
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]"
+                aria-label="Next testimonial"
+            >
+                <span>&rarr;</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="kk-review-grid grid gap-6 lg:grid-cols-3">
+        <template x-for="(card, index) in visibleCards()" :key="active + '-' + index">
+            <div
+                x-transition:enter="transition ease-out duration-500"
+                x-transition:enter-start="opacity-0 translate-y-3 scale-[0.985]"
+                x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                x-transition:leave="transition ease-in duration-250"
+                x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+                x-transition:leave-end="opacity-0 translate-y-2 scale-[0.985]"
+                class="kk-review-card rounded-[1.75rem] border border-white/10 p-7 ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30"
+            >
+                <div class="kk-review-card-body">
+                    <div class="mb-5 flex items-center justify-between gap-4">
+                        <div class="flex items-center gap-1 text-red-400">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                        </div>
+
+                        <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                            {{ app()->getLocale() === 'de' ? 'Feedback' : 'Feedback' }}
+                        </div>
+                    </div>
+
+                    <p class="text-base leading-8 text-slate-300" x-text="'“' + card.quote + '”'"></p>
+                </div>
+
+                <div class="kk-review-card-footer border-t border-white/10 pt-4">
+                    <div class="text-sm font-semibold text-white" x-text="card.role"></div>
+                    <div class="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">
+                        {{ app()->getLocale() === 'de' ? 'Professioneller Eindruck' : 'Professional impression' }}
+                    </div>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <div class="mt-6 flex items-center justify-center gap-2">
+        <template x-for="(card, index) in cards" :key="'dot-' + index">
+            <button
+                type="button"
+                @click="active = index"
+                class="h-2.5 rounded-full transition-all duration-300"
+                :class="index === active ? 'w-8 bg-red-500 shadow-[0_0_16px_rgba(239,68,68,0.55)]' : 'w-2.5 bg-white/20 hover:bg-white/35'"
+                :aria-label="'Go to testimonial ' + (index + 1)"
+            ></button>
+        </template>
+    </div>
 </div>
-
-            <div class="mt-6 flex items-center justify-center gap-2">
-                <template x-for="(card, index) in cards" :key="'dot-' + index">
-                    <button
-                        type="button"
-                        @click="active = index"
-                        class="h-2.5 rounded-full transition-all duration-300"
-                        :class="index === active ? 'w-8 bg-red-500 shadow-[0_0_16px_rgba(239,68,68,0.55)]' : 'w-2.5 bg-white/20 hover:bg-white/35'"
-                        :aria-label="'Go to testimonial ' + (index + 1)"
-                    ></button>
-                </template>
-            </div>
-        </div>
     </div>
 </section>
 
