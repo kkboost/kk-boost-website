@@ -368,7 +368,7 @@
     }
 
    .kk-review-slider {
-    min-height: 660px;
+    min-height: 620px;
 }
 
 .kk-review-grid {
@@ -376,10 +376,10 @@
 }
 
 .kk-review-card {
-    min-height: 470px;
-    height: 100%;
+    height: 420px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     background:
         linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.028) 44%, rgba(239,68,68,0.022));
     box-shadow:
@@ -390,33 +390,49 @@
 
 .kk-review-card-body {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.kk-review-quote {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: calc(2rem * 5);
 }
 
 .kk-review-card-footer {
     margin-top: auto;
 }
 
-.kk-review-card p {
-    text-wrap: pretty;
-}
-
 @media (max-width: 1023px) {
     .kk-review-slider {
-        min-height: 430px;
+        min-height: 360px;
     }
 
     .kk-review-card {
-        min-height: 340px;
+        height: 330px;
+    }
+
+    .kk-review-quote {
+        -webkit-line-clamp: 4;
+        min-height: calc(2rem * 4);
     }
 }
 
 @media (max-width: 639px) {
     .kk-review-slider {
-        min-height: 400px;
+        min-height: 340px;
     }
 
     .kk-review-card {
-        min-height: 320px;
+        height: 310px;
+    }
+
+    .kk-review-quote {
+        -webkit-line-clamp: 4;
+        min-height: calc(2rem * 4);
     }
 }
 </style>
