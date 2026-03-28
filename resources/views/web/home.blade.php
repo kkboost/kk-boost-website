@@ -1288,13 +1288,13 @@
 </section>
 
 <section class="relative overflow-hidden bg-black py-20 sm:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_left_center,rgba(239,68,68,0.05),transparent_30%)]"></div>
-    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_left_center,rgba(239,68,68,0.03),transparent_30%)]"></div>
+    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
 
     <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/8 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_16px_rgba(239,68,68,0.04)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
                 {{ app()->getLocale() === 'de' ? 'Social Proof' : 'Social Proof' }}
             </div>
 
@@ -1311,148 +1311,134 @@
 
         <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             @foreach ($socialProofStats as $stat)
-                <div class="rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-6 shadow-[0_0_30px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl">
+                <div class="rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-6 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl">
                     <div class="text-3xl font-bold text-white">{{ $stat['value'] }}</div>
                     <div class="mt-2 text-sm uppercase tracking-[0.18em] text-slate-400">{{ $stat['label'] }}</div>
                 </div>
             @endforeach
         </div>
 
-       <div
-    class="kk-review-slider mt-8"
-    x-data="{
-        active: 0,
-        cards: @js($socialProofCards),
-        visibleDesktop: 3,
-        visibleMobile: 1,
-        interval: null,
-        get visibleCount() {
-            return window.innerWidth >= 1024 ? this.visibleDesktop : this.visibleMobile;
-        },
-        next() {
-            this.active = (this.active + 1) % this.cards.length;
-        },
-        prev() {
-            this.active = (this.active - 1 + this.cards.length) % this.cards.length;
-        },
-        visibleCards() {
-            let output = [];
-            for (let i = 0; i < this.visibleCount; i++) {
-                output.push(this.cards[(this.active + i) % this.cards.length]);
-            }
-            return output;
-        },
-        startRotation() {
-            this.stopRotation();
-            this.interval = setInterval(() => {
-                this.next();
-            }, 5200);
-        },
-        stopRotation() {
-            if (this.interval) {
-                clearInterval(this.interval);
-                this.interval = null;
-            }
-        },
-        init() {
-            this.startRotation();
-            window.addEventListener('resize', () => {
-                this.active = this.active % this.cards.length;
-            });
-        }
-    }"
-    @mouseenter="stopRotation()"
-    @mouseleave="startRotation()"
->
-    <div class="mb-6 flex items-center justify-between gap-4">
-        <div class="text-sm uppercase tracking-[0.22em] text-slate-500">
-            {{ app()->getLocale() === 'de' ? 'Rezensionen & Eindrücke' : 'Reviews & Insights' }}
-        </div>
-
-        <div class="flex items-center gap-3">
-            <button
-                type="button"
-                @click="prev()"
-                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]"
-                aria-label="Previous testimonial"
-            >
-                <span>&larr;</span>
-            </button>
-
-            <button
-                type="button"
-                @click="next()"
-                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]"
-                aria-label="Next testimonial"
-            >
-                <span>&rarr;</span>
-            </button>
-        </div>
-    </div>
-
-    <div class="kk-review-grid grid gap-6 lg:grid-cols-3">
-        <template x-for="(card, index) in visibleCards()" :key="active + '-' + index">
-            <div
-                x-transition:enter="transition ease-out duration-500"
-                x-transition:enter-start="opacity-0 translate-y-3 scale-[0.985]"
-                x-transition:enter-end="opacity-100 translate-y-0 scale-100"
-                x-transition:leave="transition ease-in duration-250"
-                x-transition:leave-start="opacity-100 translate-y-0 scale-100"
-                x-transition:leave-end="opacity-0 translate-y-2 scale-[0.985]"
-                class="kk-review-card rounded-[1.75rem] border border-white/10 p-7 ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30"
-            >
-                <div class="kk-review-card-body">
-                    <div class="mb-5 flex items-center justify-between gap-4">
-                        <div class="flex items-center gap-1 text-red-400">
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                            <span>★</span>
-                        </div>
-
-                        <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-400">
-                            {{ app()->getLocale() === 'de' ? 'Feedback' : 'Feedback' }}
-                        </div>
-                    </div>
-
-                    <p class="kk-review-quote text-base leading-8 text-slate-300" x-text="'“' + card.quote + '”'"></p>
+        <div
+            class="kk-review-slider mt-8"
+            style="min-height:auto;"
+            x-data="{
+                active: 0,
+                cards: @js($socialProofCards),
+                visibleDesktop: 3,
+                visibleMobile: 1,
+                get visibleCount() {
+                    return window.innerWidth >= 1024 ? this.visibleDesktop : this.visibleMobile;
+                },
+                next() {
+                    this.active = (this.active + 1) % this.cards.length;
+                },
+                prev() {
+                    this.active = (this.active - 1 + this.cards.length) % this.cards.length;
+                },
+                visibleCards() {
+                    let output = [];
+                    for (let i = 0; i < this.visibleCount; i++) {
+                        output.push(this.cards[(this.active + i) % this.cards.length]);
+                    }
+                    return output;
+                },
+                init() {
+                    window.addEventListener('resize', () => {
+                        this.active = this.active % this.cards.length;
+                    });
+                }
+            }"
+        >
+            <div class="mb-6 flex items-center justify-between gap-4">
+                <div class="text-sm uppercase tracking-[0.22em] text-slate-500">
+                    {{ app()->getLocale() === 'de' ? 'Rezensionen & Eindrücke' : 'Reviews & Insights' }}
                 </div>
 
-                <div class="kk-review-card-footer border-t border-white/10 pt-4">
-                    <div class="text-sm font-semibold text-white" x-text="card.role"></div>
-                    <div class="mt-1 text-sm text-slate-300" x-text="card.name"></div>
-                    <div class="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">
-                        {{ app()->getLocale() === 'de' ? 'Professioneller Eindruck' : 'Professional impression' }}
-                    </div>
+                <div class="flex items-center gap-3">
+                    <button
+                        type="button"
+                        @click="prev()"
+                        class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]"
+                        aria-label="Previous testimonial"
+                    >
+                        <span>&larr;</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        @click="next()"
+                        class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]"
+                        aria-label="Next testimonial"
+                    >
+                        <span>&rarr;</span>
+                    </button>
                 </div>
             </div>
-        </template>
-    </div>
 
-    <div class="mt-5 sm:mt-6 flex items-center justify-center gap-2">
-        <template x-for="(card, index) in cards" :key="'dot-' + index">
-            <button
-                type="button"
-                @click="active = index"
-                class="h-2.5 rounded-full transition-all duration-300"
-                :class="index === active ? 'w-8 bg-red-500 shadow-[0_0_16px_rgba(239,68,68,0.55)]' : 'w-2.5 bg-white/20 hover:bg-white/35'"
-                :aria-label="'Go to testimonial ' + (index + 1)"
-            ></button>
-        </template>
-    </div>
-</div>
+            <div class="kk-review-grid grid gap-6 lg:grid-cols-3">
+                <template x-for="(card, index) in visibleCards()" :key="active + '-' + index">
+                    <div
+                        x-transition:enter="transition ease-out duration-350"
+                        x-transition:enter-start="opacity-0 translate-y-2 scale-[0.992]"
+                        x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                        x-transition:leave="transition ease-in duration-180"
+                        x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+                        x-transition:leave-end="opacity-0 translate-y-1 scale-[0.992]"
+                        class="kk-review-card rounded-[1.75rem] border border-white/10 p-7 ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:border-red-500/20"
+                        style="height:auto; min-height:0;"
+                    >
+                        <div class="kk-review-card-body">
+                            <div class="mb-5 flex items-center justify-between gap-4">
+                                <div class="flex items-center gap-1 text-red-400">
+                                    <span>★</span>
+                                    <span>★</span>
+                                    <span>★</span>
+                                    <span>★</span>
+                                    <span>★</span>
+                                </div>
+
+                                <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                                    {{ app()->getLocale() === 'de' ? 'Feedback' : 'Feedback' }}
+                                </div>
+                            </div>
+
+                            <p class="kk-review-quote text-base leading-8 text-slate-300" style="min-height:0;" x-text="'“' + card.quote + '”'"></p>
+                        </div>
+
+                        <div class="kk-review-card-footer border-t border-white/10 pt-4">
+                            <div class="text-sm font-semibold text-white" x-text="card.role"></div>
+                            <div class="mt-1 text-sm text-slate-300" x-text="card.name"></div>
+                            <div class="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">
+                                {{ app()->getLocale() === 'de' ? 'Professioneller Eindruck' : 'Professional impression' }}
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <div class="mt-5 flex items-center justify-center gap-2 sm:mt-6">
+                <template x-for="(card, index) in cards" :key="'dot-' + index">
+                    <button
+                        type="button"
+                        @click="active = index"
+                        class="h-2.5 rounded-full transition-all duration-300"
+                        :class="index === active ? 'w-8 bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.35)]' : 'w-2.5 bg-white/20 hover:bg-white/35'"
+                        :aria-label="'Go to testimonial ' + (index + 1)"
+                    ></button>
+                </template>
+            </div>
+        </div>
     </div>
 </section>
 
 <section class="relative overflow-hidden bg-[#05070b] py-16 sm:py-20 lg:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.06),transparent_38%)]"></div>
-    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.04),transparent_38%)]"></div>
+    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
 
     <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/8 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_16px_rgba(239,68,68,0.04)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
                 {{ app()->getLocale() === 'de' ? 'Case Studies' : 'Case Studies' }}
             </div>
 
@@ -1469,27 +1455,27 @@
 
         <div class="grid gap-6 xl:grid-cols-3">
             @foreach ($caseStudies as $study)
-                <div class="group overflow-hidden rounded-[1.9rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] shadow-[0_0_38px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_55px_rgba(239,68,68,0.08)]">
+                <div class="group overflow-hidden rounded-[1.9rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20 hover:shadow-[0_0_28px_rgba(239,68,68,0.04)]">
                     <div class="relative h-64 overflow-hidden">
                         <img
                             src="{{ $study['image'] }}"
                             alt="{{ $study['vehicle'] }}"
-                            class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
+                            class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
                             loading="lazy"
                             decoding="async"
                         >
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10"></div>
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.18),transparent_35%)]"></div>
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.12),transparent_35%)]"></div>
 
                         <div class="absolute left-5 top-5">
-                            <div class="inline-flex items-center rounded-full border border-red-500/20 bg-red-600/15 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-red-200 backdrop-blur-md">
+                            <div class="inline-flex items-center rounded-full border border-red-500/15 bg-red-600/12 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-red-200 backdrop-blur-md">
                                 {{ $study['badge'] }}
                             </div>
                         </div>
 
                         <div class="absolute inset-x-0 bottom-0 p-5">
-                            <h3 class="text-2xl font-semibold leading-tight text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.45)]">
+                            <h3 class="text-2xl font-semibold leading-tight text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)]">
                                 {{ $study['vehicle'] }}
                             </h3>
 
@@ -1532,7 +1518,7 @@
                                 </p>
                             </div>
 
-                            <div class="rounded-2xl border border-red-500/15 bg-gradient-to-r from-red-600/10 to-transparent p-4 shadow-[0_0_20px_rgba(239,68,68,0.04)]">
+                            <div class="rounded-2xl border border-red-500/12 bg-gradient-to-r from-red-600/8 to-transparent p-4 shadow-[0_0_12px_rgba(239,68,68,0.025)]">
                                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-red-300">
                                     {{ app()->getLocale() === 'de' ? 'Ergebnis' : 'Result' }}
                                 </div>
@@ -1543,11 +1529,11 @@
                         </div>
 
                         <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-                            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]">
+                            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
                                 {{ app()->getLocale() === 'de' ? 'Ähnliches Setup anfragen' : 'Request Similar Setup' }}
                             </a>
 
-                            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(239,68,68,0.20)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02]">
+                            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.14)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01]">
                                 {{ app()->getLocale() === 'de' ? 'Projekt starten' : 'Start Project' }}
                             </a>
                         </div>
@@ -1556,7 +1542,7 @@
             @endforeach
         </div>
 
-        <div class="mt-10 rounded-[2rem] border border-red-500/15 bg-gradient-to-r from-red-600/10 via-white/[0.02] to-transparent p-6 shadow-[0_0_50px_rgba(239,68,68,0.05)] ring-1 ring-white/5 backdrop-blur-xl sm:p-8">
+        <div class="mt-10 rounded-[2rem] border border-red-500/12 bg-gradient-to-r from-red-600/8 via-white/[0.02] to-transparent p-6 shadow-[0_0_20px_rgba(239,68,68,0.025)] ring-1 ring-white/5 backdrop-blur-xl sm:p-8">
             <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
                 <div class="max-w-2xl">
                     <div class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-red-400">
@@ -1573,11 +1559,11 @@
                 </div>
 
                 <div class="flex flex-col gap-3 sm:flex-row">
-                    <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(239,68,68,0.24)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02]">
+                    <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.14)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01]">
                         {{ app()->getLocale() === 'de' ? 'Projekt starten' : 'Start Project' }}
                     </a>
 
-                    <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]">
+                    <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
                         {{ app()->getLocale() === 'de' ? 'Sonderprojekt anfragen' : 'Request Special Project' }}
                     </a>
                 </div>

@@ -104,10 +104,10 @@ html {
         linear-gradient(
             130deg,
             transparent 0%,
-            rgba(255, 255, 255, 0.045) 18%,
+            rgba(255, 255, 255, 0.03) 18%,
             transparent 36%,
             transparent 64%,
-            rgba(239, 68, 68, 0.06) 84%,
+            rgba(239, 68, 68, 0.04) 84%,
             transparent 100%
         );
     opacity: 0;
@@ -127,7 +127,7 @@ html {
 }
 
 .kk-premium-lift:hover {
-    transform: translateY(-4px);
+    transform: translateY(-2px);
 }
 
 /* =========================================================
@@ -146,12 +146,12 @@ html {
     padding: 0.95rem 1.1rem;
     color: #fff;
     text-decoration: none;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     background:
         linear-gradient(135deg, rgba(220, 38, 38, 0.94), rgba(249, 115, 22, 0.92));
     box-shadow:
-        0 14px 40px rgba(239, 68, 68, 0.28),
-        0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+        0 10px 26px rgba(239, 68, 68, 0.18),
+        0 0 0 1px rgba(255, 255, 255, 0.03) inset;
     backdrop-filter: blur(14px);
     transition:
         transform 0.3s ease,
@@ -160,7 +160,10 @@ html {
 }
 
 .kk-floating-cta:hover {
-    transform: translateY(-2px) scale(1.02);
+    transform: translateY(-2px) scale(1.01);
+    box-shadow:
+        0 12px 28px rgba(239, 68, 68, 0.2),
+        0 0 0 1px rgba(255, 255, 255, 0.03) inset;
 }
 
 /* =========================================================
@@ -170,13 +173,13 @@ html {
 @keyframes kk-soft-pulse {
     0%,100% {
         box-shadow:
-            0 0 0 0 rgba(239, 68, 68, 0.15),
-            0 10px 24px rgba(239, 68, 68, 0.18);
+            0 0 0 0 rgba(239, 68, 68, 0.08),
+            0 8px 18px rgba(239, 68, 68, 0.12);
     }
     50% {
         box-shadow:
-            0 0 0 8px rgba(239, 68, 68, 0),
-            0 14px 34px rgba(239, 68, 68, 0.24);
+            0 0 0 6px rgba(239, 68, 68, 0),
+            0 10px 22px rgba(239, 68, 68, 0.16);
     }
 }
 
@@ -197,32 +200,32 @@ header.kk-nav-scrolled {
 }
 
 /* =========================================================
-   🔥 LIVE STATUS (NEU)
+   🔥 LIVE STATUS
 ========================================================= */
 
 @keyframes kk-status-pulse-green {
     0%,100% {
         box-shadow:
-            0 0 0 0 rgba(74,222,128,0.25),
-            0 0 20px rgba(74,222,128,0.4);
+            0 0 0 0 rgba(74,222,128,0.14),
+            0 0 12px rgba(74,222,128,0.24);
     }
     50% {
         box-shadow:
-            0 0 0 10px rgba(74,222,128,0),
-            0 0 30px rgba(74,222,128,0.6);
+            0 0 0 6px rgba(74,222,128,0),
+            0 0 18px rgba(74,222,128,0.34);
     }
 }
 
 @keyframes kk-status-pulse-red {
     0%,100% {
         box-shadow:
-            0 0 0 0 rgba(239,68,68,0.25),
-            0 0 20px rgba(239,68,68,0.4);
+            0 0 0 0 rgba(239,68,68,0.14),
+            0 0 12px rgba(239,68,68,0.24);
     }
     50% {
         box-shadow:
-            0 0 0 10px rgba(239,68,68,0),
-            0 0 30px rgba(239,68,68,0.6);
+            0 0 0 6px rgba(239,68,68,0),
+            0 0 18px rgba(239,68,68,0.34);
     }
 }
 
@@ -235,19 +238,19 @@ header.kk-nav-scrolled {
 }
 
 .kk-status-dot-active {
-    box-shadow: 0 0 12px rgba(74,222,128,0.9);
+    box-shadow: 0 0 8px rgba(74,222,128,0.55);
 }
 
 .kk-status-dot-inactive {
-    box-shadow: 0 0 12px rgba(239,68,68,0.85);
+    box-shadow: 0 0 8px rgba(239,68,68,0.5);
 }
 
 /* =========================================================
-   Review Slider Fix – kein Springen mehr
+   Review Slider Fix – ruhiger + kein großer Mobile-Abstand
 ========================================================= */
 
 .kk-review-slider {
-    min-height: 620px;
+    min-height: auto;
 }
 
 .kk-review-grid {
@@ -255,10 +258,15 @@ header.kk-nav-scrolled {
 }
 
 .kk-review-card {
-    height: 420px;
+    min-height: 420px;
+    height: auto;
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.16),
+        0 0 0 1px rgba(255,255,255,0.02),
+        inset 0 1px 0 rgba(255,255,255,0.02);
 }
 
 .kk-review-card-body {
@@ -272,7 +280,7 @@ header.kk-nav-scrolled {
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    min-height: calc(2rem * 5);
+    min-height: calc(1.9rem * 5);
 }
 
 .kk-review-card-footer {
@@ -281,30 +289,32 @@ header.kk-nav-scrolled {
 
 @media (max-width: 1023px) {
     .kk-review-slider {
-        min-height: 360px;
+        min-height: auto;
     }
 
     .kk-review-card {
-        height: 330px;
+        min-height: 320px;
+        height: auto;
     }
 
     .kk-review-quote {
         -webkit-line-clamp: 4;
-        min-height: calc(2rem * 4);
+        min-height: calc(1.8rem * 4);
     }
 }
 
 @media (max-width: 639px) {
     .kk-review-slider {
-        min-height: 340px;
+        min-height: auto;
     }
 
     .kk-review-card {
-        height: 310px;
+        min-height: 0;
+        height: auto;
     }
 
     .kk-review-quote {
         -webkit-line-clamp: 4;
-        min-height: calc(2rem * 4);
+        min-height: auto;
     }
 }
