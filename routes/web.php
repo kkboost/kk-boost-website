@@ -8,7 +8,9 @@ use App\Http\Controllers\LanguageController;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/contact', [ContactController::class, 'create'])->name('contact.create');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact', [ContactController::class, 'store'])
+    ->middleware('throttle:3,10')
+    ->name('contact.store');
 
 Route::get('/lang/{locale}', [LanguageController::class, 'set'])
     ->where('locale', 'de|en')

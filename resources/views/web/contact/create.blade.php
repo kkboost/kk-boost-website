@@ -62,6 +62,24 @@
                     <form method="POST" action="{{ route('contact.store') }}" class="space-y-6">
                         @csrf
 
+                        {{-- Spam-Schutz: verstecktes Honeypot-Feld für Bots --}}
+                        <input
+                            type="text"
+                            name="website"
+                            value=""
+                            tabindex="-1"
+                            autocomplete="off"
+                            class="hidden"
+                            aria-hidden="true"
+                        >
+
+                        {{-- Spam-Schutz: Zeitstempel zur Erkennung von zu schnellen Submits --}}
+                        <input
+                            type="hidden"
+                            name="form_time"
+                            value="{{ time() }}"
+                        >
+
                         <div class="grid gap-6 md:grid-cols-2">
                             <div>
                                 <label class="mb-2 block text-sm font-medium text-slate-200">
