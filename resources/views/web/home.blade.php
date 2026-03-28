@@ -367,74 +367,75 @@
             0 0 0 1px rgba(255,255,255,0.03);
     }
 
-   .kk-review-slider {
-    min-height: 620px;
-}
-
-.kk-review-grid {
-    align-items: stretch;
-}
-
-.kk-review-card {
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    background:
-        linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.028) 44%, rgba(239,68,68,0.022));
-    box-shadow:
-        0 24px 64px rgba(0, 0, 0, 0.24),
-        0 0 0 1px rgba(255,255,255,0.03),
-        inset 0 1px 0 rgba(255,255,255,0.03);
-}
-
-.kk-review-card-body {
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-.kk-review-quote {
-    display: -webkit-box;
-    -webkit-line-clamp: 5;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    min-height: calc(2rem * 5);
-}
-
-.kk-review-card-footer {
-    margin-top: auto;
-}
-
-@media (max-width: 1023px) {
     .kk-review-slider {
-        min-height: 360px;
+        min-height: 560px;
+    }
+
+    .kk-review-grid {
+        align-items: stretch;
     }
 
     .kk-review-card {
-        height: 330px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        background:
+            linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.028) 44%, rgba(239,68,68,0.022));
+        box-shadow:
+            0 24px 64px rgba(0, 0, 0, 0.24),
+            0 0 0 1px rgba(255,255,255,0.03),
+            inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+
+    .kk-review-card-body {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
     }
 
     .kk-review-quote {
-        -webkit-line-clamp: 4;
-        min-height: calc(2rem * 4);
-    }
-}
-
-@media (max-width: 639px) {
-    .kk-review-slider {
-        min-height: 340px;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: calc(2rem * 5);
     }
 
-    .kk-review-card {
-        height: 310px;
+    .kk-review-card-footer {
+        margin-top: auto;
     }
 
-    .kk-review-quote {
-        -webkit-line-clamp: 4;
-        min-height: calc(2rem * 4);
+    @media (max-width: 1023px) {
+        .kk-review-slider {
+            min-height: 320px;
+        }
+
+        .kk-review-card {
+            height: 300px;
+        }
+
+        .kk-review-quote {
+            -webkit-line-clamp: 4;
+            min-height: calc(2rem * 4);
+        }
     }
-}
+
+    @media (max-width: 639px) {
+        .kk-review-slider {
+            min-height: auto;
+        }
+
+        .kk-review-card {
+            height: auto;
+            min-height: 280px;
+        }
+
+        .kk-review-quote {
+            -webkit-line-clamp: 5;
+            min-height: unset;
+        }
+    }
 </style>
 @endsection
 
@@ -635,87 +636,103 @@
             'EVC / WinOLS verified',
         ];
 
-   $socialProofStats = app()->getLocale() === 'de'
-    ? [
-        ['value' => '5★', 'label' => 'starker Qualitätsanspruch'],
-        ['value' => '+1200', 'label' => 'optimierte Fahrzeuge'],
-        ['value' => '8+ Jahre', 'label' => 'Erfahrung in Softwareoptimierung'],
-        ['value' => 'ECU & TCU', 'label' => 'Programmierung & Kalibrierung'],
-    ]
-    : [
-        ['value' => '5★', 'label' => 'strong quality standard'],
-        ['value' => '+1200', 'label' => 'optimized vehicles'],
-        ['value' => '8+ years', 'label' => 'software optimization experience'],
-        ['value' => 'ECU & TCU', 'label' => 'programming & calibration'],
-    ];
+    $socialProofStats = app()->getLocale() === 'de'
+        ? [
+            ['value' => '5★', 'label' => 'starker Qualitätsanspruch'],
+            ['value' => '+1200', 'label' => 'optimierte Fahrzeuge'],
+            ['value' => '8+ Jahre', 'label' => 'Erfahrung in Softwareoptimierung'],
+            ['value' => 'ECU & TCU', 'label' => 'Programmierung & Kalibrierung'],
+        ]
+        : [
+            ['value' => '5★', 'label' => 'strong quality standard'],
+            ['value' => '+1200', 'label' => 'optimized vehicles'],
+            ['value' => '8+ years', 'label' => 'software optimization experience'],
+            ['value' => 'ECU & TCU', 'label' => 'programming & calibration'],
+        ];
 
     $socialProofCards = app()->getLocale() === 'de'
         ? [
             [
                 'quote' => 'Sehr saubere Kommunikation, schneller Ablauf und technisch überzeugendes Ergebnis. Genau die Art von professioneller Zusammenarbeit, die man sich in diesem Bereich wünscht.',
-                'role' => 'Werkstatt / Stammkunde',
+                'role' => 'Werkstattkunde',
+                'name' => 'Marek K.',
             ],
             [
                 'quote' => 'Von der Anfrage bis zur Umsetzung wirkte alles strukturiert, klar und hochwertig. Besonders positiv war die direkte Erreichbarkeit und der saubere Workflow.',
-                'role' => 'Performance-Kunde',
+                'role' => 'Performance-Enthusiast',
+                'name' => 'Yasin D.',
             ],
             [
                 'quote' => 'Kompetenter Eindruck, präzise Abstimmung und eine professionelle Außenwirkung. Die Zusammenarbeit lief zuverlässig und ohne unnötige Reibung.',
-                'role' => 'Tuning / Projektanfrage',
+                'role' => 'Projektanfrage',
+                'name' => 'Piotr S.',
             ],
             [
                 'quote' => 'Sehr professioneller Ablauf mit einer klaren Kommunikation vom ersten Kontakt bis zum fertigen Ergebnis. Genau so stellt man sich einen Premium-Anbieter vor.',
                 'role' => 'Bestandskunde',
+                'name' => 'Omar A.',
             ],
             [
                 'quote' => 'Was besonders überzeugt hat, war die Kombination aus technischer Kompetenz, direkter Erreichbarkeit und einer sehr strukturierten Umsetzung.',
                 'role' => 'Werkstattpartner',
+                'name' => 'Emre T.',
             ],
             [
                 'quote' => 'Die gesamte Abwicklung wirkte hochwertig, schnell und präzise. Kein Chaos, keine unnötigen Rückfragen, sondern ein sauberer Workflow.',
                 'role' => 'Projektkunde',
+                'name' => 'Adam W.',
             ],
             [
                 'quote' => 'Schon der erste Eindruck war deutlich professioneller als bei vielen anderen Anbietern. Die Umsetzung selbst hat diesen Eindruck bestätigt.',
                 'role' => 'Performance-Anfrage',
+                'name' => 'Karim H.',
             ],
             [
                 'quote' => 'Technisch sauber, kommunikativ stark und insgesamt sehr vertrauenswürdig. Genau die Art von Zusammenarbeit, die man langfristig sucht.',
-                'role' => 'Stammkunde / Empfehlung',
+                'role' => 'Empfehlung / Stammkunde',
+                'name' => 'Rashid M.',
             ],
         ]
         : [
             [
                 'quote' => 'Very clean communication, fast turnaround and a technically convincing result. Exactly the kind of professional collaboration you want in this field.',
-                'role' => 'Workshop / returning client',
+                'role' => 'Workshop client',
+                'name' => 'Marek K.',
             ],
             [
                 'quote' => 'From first inquiry to delivery, everything felt structured, clear and premium. Direct communication and the clean workflow stood out positively.',
-                'role' => 'Performance client',
+                'role' => 'Performance enthusiast',
+                'name' => 'Yasin D.',
             ],
             [
                 'quote' => 'Competent impression, precise calibration and a professional overall appearance. The collaboration was reliable and smooth throughout.',
-                'role' => 'Tuning / project inquiry',
+                'role' => 'Project inquiry',
+                'name' => 'Piotr S.',
             ],
             [
                 'quote' => 'A very professional process with clear communication from the first contact to the final result. Exactly what you expect from a premium provider.',
                 'role' => 'Returning client',
+                'name' => 'Omar A.',
             ],
             [
                 'quote' => 'What stood out most was the combination of technical competence, direct communication and a very structured implementation.',
                 'role' => 'Workshop partner',
+                'name' => 'Emre T.',
             ],
             [
                 'quote' => 'The entire handling felt premium, fast and precise. No chaos, no unnecessary friction, just a clean and reliable workflow.',
                 'role' => 'Project client',
+                'name' => 'Adam W.',
             ],
             [
                 'quote' => 'Even the first impression was noticeably more professional than many other providers. The actual execution fully confirmed that impression.',
                 'role' => 'Performance inquiry',
+                'name' => 'Karim H.',
             ],
             [
                 'quote' => 'Technically clean, communicatively strong and overall highly trustworthy. Exactly the type of collaboration you want long term.',
-                'role' => 'Returning client / referral',
+                'role' => 'Referral / returning client',
+                'name' => 'Rashid M.',
             ],
         ];
 
@@ -1270,7 +1287,7 @@
     </div>
 </section>
 
-<section class="relative overflow-hidden bg-black py-24">
+<section class="relative overflow-hidden bg-black py-20 sm:py-24">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_left_center,rgba(239,68,68,0.05),transparent_30%)]"></div>
     <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 
@@ -1404,6 +1421,7 @@
 
                 <div class="kk-review-card-footer border-t border-white/10 pt-4">
                     <div class="text-sm font-semibold text-white" x-text="card.role"></div>
+                    <div class="mt-1 text-sm text-slate-300" x-text="card.name"></div>
                     <div class="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">
                         {{ app()->getLocale() === 'de' ? 'Professioneller Eindruck' : 'Professional impression' }}
                     </div>
@@ -1412,7 +1430,7 @@
         </template>
     </div>
 
-    <div class="mt-6 flex items-center justify-center gap-2">
+    <div class="mt-5 sm:mt-6 flex items-center justify-center gap-2">
         <template x-for="(card, index) in cards" :key="'dot-' + index">
             <button
                 type="button"
@@ -1427,7 +1445,7 @@
     </div>
 </section>
 
-<section class="relative overflow-hidden bg-[#05070b] py-24">
+<section class="relative overflow-hidden bg-[#05070b] py-16 sm:py-20 lg:py-24">
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.06),transparent_38%)]"></div>
     <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 

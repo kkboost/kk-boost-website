@@ -35,6 +35,39 @@
 
     @yield('head')
 
+    <style>
+        html {
+            -webkit-text-size-adjust: 100%;
+            text-rendering: optimizeLegibility;
+        }
+
+        body {
+            -webkit-tap-highlight-color: transparent;
+            overscroll-behavior-y: none;
+        }
+
+        @media (max-width: 767px) {
+            .kk-mobile-lite-blur {
+                -webkit-backdrop-filter: blur(10px) !important;
+                backdrop-filter: blur(10px) !important;
+            }
+
+            .kk-mobile-lite-shadow {
+                box-shadow:
+                    0 10px 24px rgba(0,0,0,0.20),
+                    0 0 0 1px rgba(255,255,255,0.025) !important;
+            }
+
+            .kk-mobile-lite-overlay {
+                opacity: 0.012 !important;
+            }
+
+            .kk-mobile-lite-radial {
+                opacity: 0.75 !important;
+            }
+        }
+    </style>
+
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -42,16 +75,16 @@
 <body class="bg-[#05070b] text-white antialiased selection:bg-red-500 selection:text-white">
 
     <div class="relative min-h-screen overflow-hidden bg-[#05070b]">
-        <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.10),transparent_18%),radial-gradient(circle_at_bottom_right,rgba(220,38,38,0.10),transparent_22%),linear-gradient(180deg,#05070b_0%,#04060a_45%,#05070b_100%)]"></div>
-        <div class="absolute inset-0 -z-10 opacity-[0.025] kk-grid-premium"></div>
+        <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.10),transparent_18%),radial-gradient(circle_at_bottom_right,rgba(220,38,38,0.10),transparent_22%),linear-gradient(180deg,#05070b_0%,#04060a_45%,#05070b_100%)] kk-mobile-lite-radial"></div>
+        <div class="absolute inset-0 -z-10 opacity-[0.025] kk-grid-premium kk-mobile-lite-overlay"></div>
 
-        <header x-data="{ mobileMenuOpen: false }" class="sticky top-0 z-50 border-b border-white/10 bg-[#07090d]/75 backdrop-blur-2xl">
+        <header x-data="{ mobileMenuOpen: false }" class="sticky top-0 z-50 border-b border-white/10 bg-[#07090d]/75 backdrop-blur-2xl kk-mobile-lite-blur">
             <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
 
             <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
                 <a href="{{ route('home') }}" class="group flex items-center gap-4">
-                    <div class="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-red-500/[0.06] ring-1 ring-white/5 shadow-[0_14px_34px_rgba(0,0,0,0.38)] transition duration-300 group-hover:border-red-500/30 group-hover:shadow-[0_14px_40px_rgba(239,68,68,0.12)]">
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.14),transparent_55%)] opacity-70"></div>
+                    <div class="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-red-500/[0.06] ring-1 ring-white/5 shadow-[0_14px_34px_rgba(0,0,0,0.38)] transition duration-300 group-hover:border-red-500/30 group-hover:shadow-[0_14px_40px_rgba(239,68,68,0.12)] kk-mobile-lite-shadow">
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.14),transparent_55%)] opacity-70 kk-mobile-lite-radial"></div>
                         <img
                             src="{{ asset('images/branding/kk-boost-logo.png') }}"
                             alt="KK-BOOST Logo"
@@ -103,7 +136,7 @@
                 <button
                     type="button"
                     @click="mobileMenuOpen = !mobileMenuOpen"
-                    class="inline-flex xl:hidden items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.03] p-3 text-white shadow-[0_10px_24px_rgba(0,0,0,0.20)] transition duration-300 hover:border-red-500/30 hover:bg-white/10"
+                    class="inline-flex xl:hidden items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.03] p-3 text-white shadow-[0_10px_24px_rgba(0,0,0,0.20)] transition duration-300 hover:border-red-500/30 hover:bg-white/10 transform-gpu"
                     :aria-expanded="mobileMenuOpen.toString()"
                     aria-label="Menü öffnen"
                 >
@@ -125,11 +158,11 @@
                 x-transition:leave="transition ease-in duration-180"
                 x-transition:leave-start="opacity-100 translate-y-0"
                 x-transition:leave-end="opacity-0 -translate-y-3"
-                class="xl:hidden border-t border-white/10"
+                class="xl:hidden border-t border-white/10 transform-gpu"
                 style="display: none;"
             >
                 <div class="mx-auto max-w-7xl px-6 py-5 lg:px-8">
-                    <div class="overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-[#0b0f14]/95 via-[#090c11]/95 to-[#13080a]/95 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-2xl">
+                    <div class="overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-[#0b0f14]/95 via-[#090c11]/95 to-[#13080a]/95 p-5 shadow-[0_20px_60px_rgba(0,0,0,0.35)] backdrop-blur-2xl kk-mobile-lite-blur kk-mobile-lite-shadow">
                         <div class="flex flex-col gap-2">
                             <a @click="mobileMenuOpen = false" href="{{ route('home') }}#services" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 transition duration-300 hover:bg-white/5 hover:text-red-300">{{ __('home.nav_services') }}</a>
                             <a @click="mobileMenuOpen = false" href="{{ route('home') }}#expertise" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 transition duration-300 hover:bg-white/5 hover:text-red-300">{{ __('home.nav_expertise') }}</a>
@@ -174,15 +207,15 @@
         </main>
 
         <footer class="relative border-t border-white/5 bg-[#05070b]">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.08),transparent_30%)]"></div>
-            <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.08),transparent_30%)] kk-mobile-lite-radial"></div>
+            <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft kk-mobile-lite-overlay"></div>
 
             <div class="relative mx-auto max-w-7xl px-6 py-20 lg:px-8">
                 <div class="grid gap-14 md:grid-cols-4">
                     <div class="md:col-span-2">
                         <div class="flex items-center gap-4">
-                            <div class="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-red-500/[0.06] ring-1 ring-white/5 shadow-[0_14px_34px_rgba(0,0,0,0.32)]">
-                                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.14),transparent_55%)] opacity-70"></div>
+                            <div class="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-red-500/[0.06] ring-1 ring-white/5 shadow-[0_14px_34px_rgba(0,0,0,0.32)] kk-mobile-lite-shadow">
+                                <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.14),transparent_55%)] opacity-70 kk-mobile-lite-radial"></div>
                                 <img
                                     src="{{ asset('images/branding/kk-boost-logo.png') }}"
                                     alt="KK-BOOST Logo"
