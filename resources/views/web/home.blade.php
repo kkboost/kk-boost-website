@@ -913,39 +913,34 @@
         <source src="{{ asset('videos/hero.mp4') }}" type="video/mp4">
     </video>
 
-   <div class="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-black"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.08),transparent_58%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.035),transparent_30%)]"></div>
-    <div class="absolute inset-0 opacity-[0.014] kk-grid-premium"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/95 via-black/78 to-black"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.16),transparent_58%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.06),transparent_30%)]"></div>
+    <div class="absolute inset-0 opacity-[0.02] kk-grid-premium"></div>
 
-    <div class="relative z-10 mx-auto flex min-h-[100svh] max-w-[1440px] items-center px-6 pb-12 pt-28 sm:pt-32 lg:px-10 lg:pb-20 lg:pt-36">
-        <div class="grid w-full items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
+    <div class="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl items-center px-6 pb-12 pt-28 sm:pt-32 lg:px-8 lg:pb-20 lg:pt-36">
+        <div class="grid w-full items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             <div class="max-w-3xl">
-                <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/[0.08] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-red-300 backdrop-blur-md shadow-[0_0_16px_rgba(239,68,68,0.05)] sm:text-sm">
-                    <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+                <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-red-300 backdrop-blur-md shadow-[0_0_30px_rgba(239,68,68,0.10)] sm:text-sm">
+                    <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                     {{ __('home.hero_badge') }}
                 </div>
 
-                <h1 class="max-w-4xl text-4xl font-bold tracking-[-0.045em] text-white sm:text-5xl lg:text-[4.5rem]">
-    <span class="block leading-[0.98]">
-        {{ __('home.hero_title_1') }}
-    </span>
+                <h1 class="max-w-4xl text-4xl font-bold leading-[0.98] tracking-[-0.045em] text-white sm:text-5xl lg:text-[4.5rem]">
+                    {{ __('home.hero_title_1') }}<br>
+                    <span class="text-red-500 drop-shadow-[0_0_18px_rgba(239,68,68,0.35)]">
+                        {{ __('home.hero_title_2') }}
+                    </span><br>
+                    {{ __('home.hero_title_3') }}
+                </h1>
 
-    <span class="block leading-[1.08] text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.18)]">
-        {{ __('home.hero_title_2') }}
-    </span>
-
-    <span class="block leading-[0.98]">
-        {{ __('home.hero_title_3') }}
-    </span>
-</h1>
-                <p class="mt-8 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg sm:leading-8">
+                <p class="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg sm:leading-8">
                     {{ __('home.hero_intro_premium') }}
                 </p>
 
                 <div class="mt-7 flex flex-wrap gap-3">
                     @foreach ($heroMicroPoints as $point)
-                        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.035] px-4 py-2 text-[0.72rem] font-medium tracking-[0.04em] text-slate-200 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] sm:text-xs">
+                        <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-[0.72rem] font-medium tracking-[0.04em] text-slate-200 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:text-xs">
                             <span class="h-1.5 w-1.5 rounded-full bg-red-500"></span>
                             {{ $point }}
                         </div>
@@ -953,30 +948,30 @@
                 </div>
 
                 <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:gap-4">
-                    <a href="https://kk-boostfileservice.de/register" class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.16)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.01] hover:bg-red-500 sm:text-base">
+                    <a href="https://kk-boostfileservice.de/register" class="group relative inline-flex items-center justify-center overflow-hidden rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-red-600/30 ring-1 ring-red-400/20 transition duration-300 hover:scale-[1.02] hover:bg-red-500 sm:text-base">
                         <span class="relative z-10">{{ __('home.hero_primary_button') }}</span>
                         <div class="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 opacity-0 transition duration-300 group-hover:opacity-100"></div>
                     </a>
 
-                    <a href="#services" class="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/[0.02] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-white/30 hover:bg-white/[0.05] sm:text-base">
+                    <a href="#services" class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/[0.02] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-white/40 hover:bg-white/10 sm:text-base">
                         {{ __('home.hero_secondary_button') }}
                     </a>
                 </div>
 
                 <div class="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                    <a href="{{ route('contact.create') }}" class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm font-medium text-slate-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05] hover:text-white">
+                    <a href="{{ route('contact.create') }}" class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-medium text-slate-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] transition duration-300 hover:border-red-500/30 hover:bg-white/[0.07] hover:text-white">
                         <span class="h-2 w-2 rounded-full bg-red-500"></span>
                         {{ __('home.hero_quote_button') }}
                     </a>
 
-                    <a href="https://kk-boostfileservice.de/login" class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.035] px-4 py-3 text-sm font-medium text-slate-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05] hover:text-white">
+                    <a href="https://kk-boostfileservice.de/login" class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-medium text-slate-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] transition duration-300 hover:border-red-500/30 hover:bg-white/[0.07] hover:text-white">
                         <span class="h-2 w-2 rounded-full bg-white/70"></span>
                         {{ __('home.hero_portal_button') }}
                     </a>
                 </div>
 
                 <div class="mt-8 grid gap-3 sm:grid-cols-3">
-                    <div class="rounded-2xl border border-white/10 bg-black/30 px-4 py-4 shadow-[0_0_14px_rgba(0,0,0,0.10)] backdrop-blur-xl">
+                    <div class="rounded-2xl border border-white/10 bg-black/35 px-4 py-4 shadow-[0_0_24px_rgba(0,0,0,0.14)] backdrop-blur-xl">
                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-red-400">
                             {{ __('home.hero_card_1_title') }}
                         </div>
@@ -985,7 +980,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-2xl border border-white/10 bg-black/30 px-4 py-4 shadow-[0_0_14px_rgba(0,0,0,0.10)] backdrop-blur-xl">
+                    <div class="rounded-2xl border border-white/10 bg-black/35 px-4 py-4 shadow-[0_0_24px_rgba(0,0,0,0.14)] backdrop-blur-xl">
                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-red-400">
                             {{ __('home.hero_card_2_title') }}
                         </div>
@@ -994,7 +989,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-2xl border border-white/10 bg-black/30 px-4 py-4 shadow-[0_0_14px_rgba(0,0,0,0.10)] backdrop-blur-xl">
+                    <div class="rounded-2xl border border-white/10 bg-black/35 px-4 py-4 shadow-[0_0_24px_rgba(0,0,0,0.14)] backdrop-blur-xl">
                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-red-400">
                             {{ __('home.hero_card_3_title') }}
                         </div>
@@ -1005,7 +1000,7 @@
                 </div>
 
                 <div class="mt-8 grid gap-3 sm:grid-cols-2 xl:max-w-2xl">
-                    <div class="rounded-2xl border border-red-500/12 bg-gradient-to-br from-red-600/[0.08] to-transparent px-5 py-4 shadow-[0_0_16px_rgba(239,68,68,0.03)] backdrop-blur-xl">
+                    <div class="rounded-2xl border border-red-500/15 bg-gradient-to-br from-red-600/10 to-transparent px-5 py-4 shadow-[0_0_30px_rgba(239,68,68,0.06)] backdrop-blur-xl">
                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-red-400">
                             {{ __('home.hero_fast_onboarding_title') }}
                         </div>
@@ -1014,7 +1009,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-2xl border border-white/10 bg-black/25 px-5 py-4 shadow-[0_0_14px_rgba(0,0,0,0.10)] backdrop-blur-xl">
+                    <div class="rounded-2xl border border-white/10 bg-black/30 px-5 py-4 shadow-[0_0_24px_rgba(0,0,0,0.12)] backdrop-blur-xl">
                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-red-400">
                             {{ __('home.hero_direct_contact_title') }}
                         </div>
@@ -1026,10 +1021,10 @@
             </div>
 
             <div class="hidden lg:block">
-                <div class="relative mx-auto max-w-[600px]">
-                    <div class="absolute -inset-4 rounded-[2rem] bg-red-600/[0.05] blur-3xl"></div>
+                <div class="relative mx-auto max-w-[560px]">
+                    <div class="absolute -inset-6 rounded-[2rem] bg-red-600/10 blur-3xl"></div>
 
-                    <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/30 p-6 shadow-[0_18px_54px_rgba(0,0,0,0.26)] ring-1 ring-white/5 backdrop-blur-2xl">
+                    <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-black/35 p-6 shadow-[0_24px_90px_rgba(0,0,0,0.40)] ring-1 ring-white/5 backdrop-blur-2xl">
                         <div class="flex items-center justify-between border-b border-white/10 pb-4">
                             <div>
                                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-red-400">{{ __('home.hero_console_kicker') }}</div>
@@ -1046,7 +1041,7 @@
                         </div>
 
                         <div class="mt-6 grid gap-4 sm:grid-cols-2">
-                            <div class="rounded-2xl border border-white/10 bg-white/[0.025] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-400">
                                     {{ __('home.hero_console_hours_title') }}
                                 </div>
@@ -1054,7 +1049,7 @@
                                 <div class="mt-2 text-sm text-slate-400">{{ __('home.hero_console_hours_sub') }}</div>
                             </div>
 
-                            <div class="rounded-2xl border border-white/10 bg-white/[0.025] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-400">
                                     {{ __('home.hero_console_saturday_title') }}
                                 </div>
@@ -1064,7 +1059,7 @@
                                 </div>
                             </div>
 
-                            <div class="rounded-2xl border border-white/10 bg-white/[0.025] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-400">
                                     {{ __('home.hero_console_gearbox_title') }}
                                 </div>
@@ -1076,7 +1071,7 @@
                                 </div>
                             </div>
 
-                            <div class="rounded-2xl border border-white/10 bg-white/[0.025] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-400">
                                     {{ __('home.hero_console_special_title') }}
                                 </div>
@@ -1086,7 +1081,7 @@
                                 </div>
                             </div>
 
-                            <div class="rounded-2xl border border-white/10 bg-white/[0.025] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)] sm:col-span-2">
+                            <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)] sm:col-span-2">
                                 <div class="flex items-center justify-between">
                                     <div>
                                         <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-slate-400">
@@ -1097,7 +1092,7 @@
                                         </div>
                                     </div>
                                     <div class="text-right">
-                                        <div class="inline-flex items-center rounded-full border px-4 py-2 text-base font-bold tracking-[0.14em] uppercase {{ $isActive ? 'kk-status-active border-green-400/25 bg-green-500/[0.08] text-green-300 shadow-[0_0_10px_rgba(74,222,128,0.12)]' : 'kk-status-inactive border-red-500/25 bg-red-500/[0.08] text-red-400 shadow-[0_0_10px_rgba(239,68,68,0.10)]' }}">
+                                        <div class="inline-flex items-center rounded-full border px-4 py-2 text-base font-bold tracking-[0.14em] uppercase {{ $isActive ? 'kk-status-active border-green-400/30 bg-green-500/10 text-green-300 shadow-[0_0_22px_rgba(74,222,128,0.28)]' : 'kk-status-inactive border-red-500/30 bg-red-500/10 text-red-400 shadow-[0_0_22px_rgba(239,68,68,0.18)]' }}">
                                             <span class="mr-2 inline-block h-2.5 w-2.5 rounded-full {{ $isActive ? 'bg-green-400 kk-status-dot-active animate-pulse' : 'bg-red-500 kk-status-dot-inactive' }}"></span>
                                             {{ $liveStatusText }}
                                         </div>
@@ -1105,12 +1100,12 @@
                                 </div>
 
                                 <div class="mt-5 h-2 overflow-hidden rounded-full bg-white/10">
-                                    <div class="h-full w-[84%] rounded-full bg-gradient-to-r from-red-500 via-red-400 to-orange-400 shadow-[0_0_8px_rgba(239,68,68,0.18)]"></div>
+                                    <div class="h-full w-[84%] rounded-full bg-gradient-to-r from-red-500 via-red-400 to-orange-400 shadow-[0_0_18px_rgba(239,68,68,0.45)]"></div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="mt-6 rounded-2xl border border-red-500/12 bg-gradient-to-r from-red-600/[0.08] to-transparent p-5 shadow-[0_0_14px_rgba(239,68,68,0.03)]">
+                        <div class="mt-6 rounded-2xl border border-red-500/15 bg-gradient-to-r from-red-600/10 to-transparent p-5 shadow-[0_0_24px_rgba(239,68,68,0.05)]">
                             <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-red-400">
                                 {{ __('home.hero_console_about_title') }}
                             </div>
@@ -1120,11 +1115,11 @@
                         </div>
 
                         <div class="mt-6 grid gap-3 sm:grid-cols-2">
-                            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.16)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01] hover:shadow-[0_12px_26px_rgba(239,68,68,0.20)]">
+                            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(239,68,68,0.24)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02] hover:shadow-[0_20px_48px_rgba(239,68,68,0.34)]">
                                 {{ __('home.hero_console_register_button') }}
                             </a>
 
-                            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
+                            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]">
                                 {{ __('home.hero_console_consultation_button') }}
                             </a>
                         </div>
@@ -1132,8 +1127,8 @@
                 </div>
             </div>
 
-           <div class="lg:hidden">
-    <div class="rounded-[1.75rem] border border-white/10 bg-black/30 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] ring-1 ring-white/5 backdrop-blur-2xl">
+            <div class="lg:hidden">
+                <div class="rounded-[1.75rem] border border-white/10 bg-black/35 p-5 shadow-[0_20px_70px_rgba(0,0,0,0.30)] ring-1 ring-white/5 backdrop-blur-2xl">
                     <div class="flex items-center justify-between border-b border-white/10 pb-4">
                         <div>
                             <div class="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-red-400">
@@ -1170,7 +1165,7 @@
                             </div>
                         </div>
 
-                        <div class="rounded-2xl border {{ $isActive ? 'border-green-400/20 bg-green-500/[0.08]' : 'border-red-500/20 bg-red-500/[0.08]' }} p-4">
+                        <div class="rounded-2xl border {{ $isActive ? 'border-green-400/25 bg-green-500/10' : 'border-red-500/25 bg-red-500/10' }} p-4">
                             <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] {{ $isActive ? 'text-green-300' : 'text-red-400' }}">
                                 Live Status
                             </div>
@@ -1182,11 +1177,11 @@
                     </div>
 
                     <div class="mt-5 grid gap-3 sm:grid-cols-2">
-                        <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.16)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01]">
+                        <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(239,68,68,0.24)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02]">
                             {{ __('home.hero_mobile_register') }}
                         </a>
 
-                        <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
+                        <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]">
                             {{ __('home.hero_mobile_contact') }}
                         </a>
                     </div>
@@ -1196,7 +1191,7 @@
     </div>
 
     <div class="pointer-events-none absolute inset-x-0 bottom-8 z-10 hidden justify-center lg:flex">
-        <a href="#services" class="pointer-events-auto inline-flex items-center gap-3 rounded-full border border-white/10 bg-black/25 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-300 backdrop-blur-md transition duration-300 hover:border-red-500/20 hover:text-white">
+        <a href="#services" class="pointer-events-auto inline-flex items-center gap-3 rounded-full border border-white/10 bg-black/25 px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-slate-300 backdrop-blur-md transition duration-300 hover:border-red-500/30 hover:text-white">
             <span class="h-1.5 w-1.5 rounded-full bg-red-500"></span>
             {{ app()->getLocale() === 'de' ? 'Mehr entdecken' : 'Discover more' }}
         </a>
@@ -1204,22 +1199,22 @@
 </section>
 
 <section class="relative bg-black py-14 sm:py-16">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.03),transparent_45%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.05),transparent_45%)]"></div>
 
-    <div class="relative mx-auto grid max-w-[1440px] grid-cols-2 gap-4 px-6 text-center md:grid-cols-4 lg:px-10">
-        <div class="rounded-[1.4rem] border border-white/8 bg-white/[0.02] px-4 py-5 shadow-[0_0_12px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+    <div class="relative mx-auto grid max-w-7xl grid-cols-2 gap-4 px-6 text-center md:grid-cols-4 lg:px-8">
+        <div class="rounded-[1.4rem] border border-white/8 bg-white/[0.02] px-4 py-5 shadow-[0_0_24px_rgba(0,0,0,0.12)] backdrop-blur-sm">
             <div class="text-3xl font-bold text-red-500">{{ __('home.stat_1_value') }}</div>
             <div class="mt-1 text-sm text-slate-400">{{ __('home.stat_1_label') }}</div>
         </div>
-        <div class="rounded-[1.4rem] border border-white/8 bg-white/[0.02] px-4 py-5 shadow-[0_0_12px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+        <div class="rounded-[1.4rem] border border-white/8 bg-white/[0.02] px-4 py-5 shadow-[0_0_24px_rgba(0,0,0,0.12)] backdrop-blur-sm">
             <div class="text-3xl font-bold text-red-500">{{ __('home.stat_service_hours_value') }}</div>
             <div class="mt-1 text-sm text-slate-400">{{ __('home.stat_service_hours_label') }}</div>
         </div>
-        <div class="rounded-[1.4rem] border border-white/8 bg-white/[0.02] px-4 py-5 shadow-[0_0_12px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+        <div class="rounded-[1.4rem] border border-white/8 bg-white/[0.02] px-4 py-5 shadow-[0_0_24px_rgba(0,0,0,0.12)] backdrop-blur-sm">
             <div class="text-3xl font-bold text-red-500">{{ __('home.stat_stage_value') }}</div>
             <div class="mt-1 text-sm text-slate-400">{{ __('home.stat_stage_label') }}</div>
         </div>
-        <div class="rounded-[1.4rem] border border-white/8 bg-white/[0.02] px-4 py-5 shadow-[0_0_12px_rgba(0,0,0,0.08)] backdrop-blur-sm">
+        <div class="rounded-[1.4rem] border border-white/8 bg-white/[0.02] px-4 py-5 shadow-[0_0_24px_rgba(0,0,0,0.12)] backdrop-blur-sm">
             <div class="text-3xl font-bold text-red-500">{{ __('home.stat_4_value') }}</div>
             <div class="mt-1 text-sm text-slate-400">{{ __('home.stat_4_label') }}</div>
         </div>
@@ -1227,13 +1222,13 @@
 </section>
 
 <section class="relative overflow-hidden bg-[#05070b] py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.04),transparent_40%)]"></div>
-    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.07),transparent_40%)]"></div>
+    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 
-    <div class="relative mx-auto max-w-[1440px] px-6 lg:px-10">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/[0.08] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_14px_rgba(239,68,68,0.04)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                 {{ app()->getLocale() === 'de' ? 'Trust & Positionierung' : 'Trust & Positioning' }}
             </div>
 
@@ -1250,7 +1245,7 @@
 
         <div class="grid gap-6 md:grid-cols-3">
             @foreach ($trustBoosters as $booster)
-                <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-7 shadow-[0_0_16px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20 hover:shadow-[0_0_24px_rgba(239,68,68,0.04)]">
+                <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-7 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_45px_rgba(239,68,68,0.08)]">
                     <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-red-400">
                         {{ $booster['kicker'] }}
                     </div>
@@ -1264,7 +1259,7 @@
             @endforeach
         </div>
 
-        <div class="mt-8 rounded-[2rem] border border-red-500/12 bg-gradient-to-r from-red-600/[0.08] via-white/[0.02] to-transparent p-6 shadow-[0_0_20px_rgba(239,68,68,0.025)] ring-1 ring-white/5 backdrop-blur-xl sm:p-8">
+        <div class="mt-8 rounded-[2rem] border border-red-500/15 bg-gradient-to-r from-red-600/10 via-white/[0.02] to-transparent p-6 shadow-[0_0_50px_rgba(239,68,68,0.05)] ring-1 ring-white/5 backdrop-blur-xl sm:p-8">
             <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
                 <div class="max-w-2xl">
                     <div class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-red-400">
@@ -1282,7 +1277,7 @@
 
                 <div class="grid gap-3 sm:grid-cols-2 lg:min-w-[360px]">
                     @foreach ($trustProofPoints as $point)
-                        <div class="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-slate-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                        <div class="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-slate-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                             {{ $point }}
                         </div>
                     @endforeach
@@ -1293,13 +1288,13 @@
 </section>
 
 <section class="relative overflow-hidden bg-black py-20 sm:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_left_center,rgba(239,68,68,0.03),transparent_30%)]"></div>
-    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_left_center,rgba(239,68,68,0.05),transparent_30%)]"></div>
+    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 
-    <div class="relative mx-auto max-w-[1440px] px-6 lg:px-10">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/8 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_16px_rgba(239,68,68,0.04)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                 {{ app()->getLocale() === 'de' ? 'Social Proof' : 'Social Proof' }}
             </div>
 
@@ -1316,134 +1311,148 @@
 
         <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             @foreach ($socialProofStats as $stat)
-                <div class="rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-6 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl">
+                <div class="rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-6 shadow-[0_0_30px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl">
                     <div class="text-3xl font-bold text-white">{{ $stat['value'] }}</div>
                     <div class="mt-2 text-sm uppercase tracking-[0.18em] text-slate-400">{{ $stat['label'] }}</div>
                 </div>
             @endforeach
         </div>
 
-        <div
-            class="kk-review-slider mt-8"
-            style="min-height:auto;"
-            x-data="{
-                active: 0,
-                cards: @js($socialProofCards),
-                visibleDesktop: 3,
-                visibleMobile: 1,
-                get visibleCount() {
-                    return window.innerWidth >= 1024 ? this.visibleDesktop : this.visibleMobile;
-                },
-                next() {
-                    this.active = (this.active + 1) % this.cards.length;
-                },
-                prev() {
-                    this.active = (this.active - 1 + this.cards.length) % this.cards.length;
-                },
-                visibleCards() {
-                    let output = [];
-                    for (let i = 0; i < this.visibleCount; i++) {
-                        output.push(this.cards[(this.active + i) % this.cards.length]);
-                    }
-                    return output;
-                },
-                init() {
-                    window.addEventListener('resize', () => {
-                        this.active = this.active % this.cards.length;
-                    });
-                }
-            }"
-        >
-            <div class="mb-6 flex items-center justify-between gap-4">
-                <div class="text-sm uppercase tracking-[0.22em] text-slate-500">
-                    {{ app()->getLocale() === 'de' ? 'Rezensionen & Eindrücke' : 'Reviews & Insights' }}
-                </div>
+       <div
+    class="kk-review-slider mt-8"
+    x-data="{
+        active: 0,
+        cards: @js($socialProofCards),
+        visibleDesktop: 3,
+        visibleMobile: 1,
+        interval: null,
+        get visibleCount() {
+            return window.innerWidth >= 1024 ? this.visibleDesktop : this.visibleMobile;
+        },
+        next() {
+            this.active = (this.active + 1) % this.cards.length;
+        },
+        prev() {
+            this.active = (this.active - 1 + this.cards.length) % this.cards.length;
+        },
+        visibleCards() {
+            let output = [];
+            for (let i = 0; i < this.visibleCount; i++) {
+                output.push(this.cards[(this.active + i) % this.cards.length]);
+            }
+            return output;
+        },
+        startRotation() {
+            this.stopRotation();
+            this.interval = setInterval(() => {
+                this.next();
+            }, 5200);
+        },
+        stopRotation() {
+            if (this.interval) {
+                clearInterval(this.interval);
+                this.interval = null;
+            }
+        },
+        init() {
+            this.startRotation();
+            window.addEventListener('resize', () => {
+                this.active = this.active % this.cards.length;
+            });
+        }
+    }"
+    @mouseenter="stopRotation()"
+    @mouseleave="startRotation()"
+>
+    <div class="mb-6 flex items-center justify-between gap-4">
+        <div class="text-sm uppercase tracking-[0.22em] text-slate-500">
+            {{ app()->getLocale() === 'de' ? 'Rezensionen & Eindrücke' : 'Reviews & Insights' }}
+        </div>
 
-                <div class="flex items-center gap-3">
-                    <button
-                        type="button"
-                        @click="prev()"
-                        class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]"
-                        aria-label="Previous testimonial"
-                    >
-                        <span>&larr;</span>
-                    </button>
+        <div class="flex items-center gap-3">
+            <button
+                type="button"
+                @click="prev()"
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]"
+                aria-label="Previous testimonial"
+            >
+                <span>&larr;</span>
+            </button>
 
-                    <button
-                        type="button"
-                        @click="next()"
-                        class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]"
-                        aria-label="Next testimonial"
-                    >
-                        <span>&rarr;</span>
-                    </button>
-                </div>
-            </div>
+            <button
+                type="button"
+                @click="next()"
+                class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]"
+                aria-label="Next testimonial"
+            >
+                <span>&rarr;</span>
+            </button>
+        </div>
+    </div>
 
-            <div class="kk-review-grid grid gap-6 lg:grid-cols-3">
-                <template x-for="(card, index) in visibleCards()" :key="active + '-' + index">
-                    <div
-                        x-transition:enter="transition ease-out duration-350"
-                        x-transition:enter-start="opacity-0 translate-y-2 scale-[0.992]"
-                        x-transition:enter-end="opacity-100 translate-y-0 scale-100"
-                        x-transition:leave="transition ease-in duration-180"
-                        x-transition:leave-start="opacity-100 translate-y-0 scale-100"
-                        x-transition:leave-end="opacity-0 translate-y-1 scale-[0.992]"
-                        class="kk-review-card rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.035] via-white/[0.02] to-red-500/[0.01] p-7 ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:border-red-500/20"
-                        style="height:auto; min-height:0;"
-                    >
-                        <div class="kk-review-card-body">
-                            <div class="mb-5 flex items-center justify-between gap-4">
-                                <div class="flex items-center gap-1 text-red-400">
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                    <span>★</span>
-                                </div>
-
-                                <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-400">
-                                    {{ app()->getLocale() === 'de' ? 'Feedback' : 'Feedback' }}
-                                </div>
-                            </div>
-
-                            <p class="kk-review-quote text-base leading-8 text-slate-300" style="min-height:0;" x-text="'“' + card.quote + '”'"></p>
+    <div class="kk-review-grid grid gap-6 lg:grid-cols-3">
+        <template x-for="(card, index) in visibleCards()" :key="active + '-' + index">
+            <div
+                x-transition:enter="transition ease-out duration-500"
+                x-transition:enter-start="opacity-0 translate-y-3 scale-[0.985]"
+                x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+                x-transition:leave="transition ease-in duration-250"
+                x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+                x-transition:leave-end="opacity-0 translate-y-2 scale-[0.985]"
+                class="kk-review-card rounded-[1.75rem] border border-white/10 p-7 ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30"
+            >
+                <div class="kk-review-card-body">
+                    <div class="mb-5 flex items-center justify-between gap-4">
+                        <div class="flex items-center gap-1 text-red-400">
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
+                            <span>★</span>
                         </div>
 
-                        <div class="kk-review-card-footer border-t border-white/10 pt-4">
-                            <div class="text-sm font-semibold text-white" x-text="card.role"></div>
-                            <div class="mt-1 text-sm text-slate-300" x-text="card.name"></div>
-                            <div class="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">
-                                {{ app()->getLocale() === 'de' ? 'Professioneller Eindruck' : 'Professional impression' }}
-                            </div>
+                        <div class="rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-slate-400">
+                            {{ app()->getLocale() === 'de' ? 'Feedback' : 'Feedback' }}
                         </div>
                     </div>
-                </template>
-            </div>
 
-            <div class="mt-5 flex items-center justify-center gap-2 sm:mt-6">
-                <template x-for="(card, index) in cards" :key="'dot-' + index">
-                    <button
-                        type="button"
-                        @click="active = index"
-                        class="h-2.5 rounded-full transition-all duration-300"
-                        :class="index === active ? 'w-8 bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.35)]' : 'w-2.5 bg-white/20 hover:bg-white/35'"
-                        :aria-label="'Go to testimonial ' + (index + 1)"
-                    ></button>
-                </template>
+                    <p class="kk-review-quote text-base leading-8 text-slate-300" x-text="'“' + card.quote + '”'"></p>
+                </div>
+
+                <div class="kk-review-card-footer border-t border-white/10 pt-4">
+                    <div class="text-sm font-semibold text-white" x-text="card.role"></div>
+                    <div class="mt-1 text-sm text-slate-300" x-text="card.name"></div>
+                    <div class="mt-1 text-xs uppercase tracking-[0.18em] text-slate-500">
+                        {{ app()->getLocale() === 'de' ? 'Professioneller Eindruck' : 'Professional impression' }}
+                    </div>
+                </div>
             </div>
-        </div>
+        </template>
+    </div>
+
+    <div class="mt-5 sm:mt-6 flex items-center justify-center gap-2">
+        <template x-for="(card, index) in cards" :key="'dot-' + index">
+            <button
+                type="button"
+                @click="active = index"
+                class="h-2.5 rounded-full transition-all duration-300"
+                :class="index === active ? 'w-8 bg-red-500 shadow-[0_0_16px_rgba(239,68,68,0.55)]' : 'w-2.5 bg-white/20 hover:bg-white/35'"
+                :aria-label="'Go to testimonial ' + (index + 1)"
+            ></button>
+        </template>
+    </div>
+</div>
     </div>
 </section>
 
 <section class="relative overflow-hidden bg-[#05070b] py-16 sm:py-20 lg:py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.04),transparent_38%)]"></div>
-    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.06),transparent_38%)]"></div>
+    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 
-    <div class="relative mx-auto max-w-[1440px] px-6 lg:px-10">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/8 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_16px_rgba(239,68,68,0.04)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                 {{ app()->getLocale() === 'de' ? 'Case Studies' : 'Case Studies' }}
             </div>
 
@@ -1460,27 +1469,27 @@
 
         <div class="grid gap-6 xl:grid-cols-3">
             @foreach ($caseStudies as $study)
-                <div class="group overflow-hidden rounded-[1.9rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20 hover:shadow-[0_0_28px_rgba(239,68,68,0.04)]">
+                <div class="group overflow-hidden rounded-[1.9rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] shadow-[0_0_38px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_55px_rgba(239,68,68,0.08)]">
                     <div class="relative h-64 overflow-hidden">
                         <img
                             src="{{ $study['image'] }}"
                             alt="{{ $study['vehicle'] }}"
-                            class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                            class="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
                             loading="lazy"
                             decoding="async"
                         >
 
                         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10"></div>
-                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.12),transparent_35%)]"></div>
+                        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(239,68,68,0.18),transparent_35%)]"></div>
 
                         <div class="absolute left-5 top-5">
-                            <div class="inline-flex items-center rounded-full border border-red-500/15 bg-red-600/12 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-red-200 backdrop-blur-md">
+                            <div class="inline-flex items-center rounded-full border border-red-500/20 bg-red-600/15 px-3 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-red-200 backdrop-blur-md">
                                 {{ $study['badge'] }}
                             </div>
                         </div>
 
                         <div class="absolute inset-x-0 bottom-0 p-5">
-                            <h3 class="text-2xl font-semibold leading-tight text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.35)]">
+                            <h3 class="text-2xl font-semibold leading-tight text-white drop-shadow-[0_4px_14px_rgba(0,0,0,0.45)]">
                                 {{ $study['vehicle'] }}
                             </h3>
 
@@ -1523,7 +1532,7 @@
                                 </p>
                             </div>
 
-                            <div class="rounded-2xl border border-red-500/12 bg-gradient-to-r from-red-600/8 to-transparent p-4 shadow-[0_0_12px_rgba(239,68,68,0.025)]">
+                            <div class="rounded-2xl border border-red-500/15 bg-gradient-to-r from-red-600/10 to-transparent p-4 shadow-[0_0_20px_rgba(239,68,68,0.04)]">
                                 <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-red-300">
                                     {{ app()->getLocale() === 'de' ? 'Ergebnis' : 'Result' }}
                                 </div>
@@ -1534,11 +1543,11 @@
                         </div>
 
                         <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-                            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
+                            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]">
                                 {{ app()->getLocale() === 'de' ? 'Ähnliches Setup anfragen' : 'Request Similar Setup' }}
                             </a>
 
-                            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.14)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01]">
+                            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(239,68,68,0.20)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02]">
                                 {{ app()->getLocale() === 'de' ? 'Projekt starten' : 'Start Project' }}
                             </a>
                         </div>
@@ -1547,7 +1556,7 @@
             @endforeach
         </div>
 
-        <div class="mt-10 rounded-[2rem] border border-red-500/12 bg-gradient-to-r from-red-600/8 via-white/[0.02] to-transparent p-6 shadow-[0_0_20px_rgba(239,68,68,0.025)] ring-1 ring-white/5 backdrop-blur-xl sm:p-8">
+        <div class="mt-10 rounded-[2rem] border border-red-500/15 bg-gradient-to-r from-red-600/10 via-white/[0.02] to-transparent p-6 shadow-[0_0_50px_rgba(239,68,68,0.05)] ring-1 ring-white/5 backdrop-blur-xl sm:p-8">
             <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
                 <div class="max-w-2xl">
                     <div class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-red-400">
@@ -1564,11 +1573,11 @@
                 </div>
 
                 <div class="flex flex-col gap-3 sm:flex-row">
-                    <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.14)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01]">
+                    <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(239,68,68,0.24)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02]">
                         {{ app()->getLocale() === 'de' ? 'Projekt starten' : 'Start Project' }}
                     </a>
 
-                    <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
+                    <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]">
                         {{ app()->getLocale() === 'de' ? 'Sonderprojekt anfragen' : 'Request Special Project' }}
                     </a>
                 </div>
@@ -1578,13 +1587,13 @@
 </section>
 
 <section id="services" class="relative overflow-hidden bg-black py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_left_top,rgba(239,68,68,0.04),transparent_28%)]"></div>
-    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_left_top,rgba(239,68,68,0.06),transparent_28%)]"></div>
+    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 
-    <div class="relative mx-auto max-w-[1440px] px-6 lg:px-10">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/[0.08] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_14px_rgba(239,68,68,0.04)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                 {{ __('home.services_kicker') }}
             </div>
 
@@ -1594,7 +1603,7 @@
         </div>
 
         <div class="grid gap-8 md:grid-cols-3">
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-8 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-8 shadow-[0_0_40px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_50px_rgba(239,68,68,0.08)]">
                 <h3 class="mb-4 text-xl font-semibold text-white">
                     {{ __('home.services_card_custom_title') }}
                 </h3>
@@ -1603,7 +1612,7 @@
                 </p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-8 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-8 shadow-[0_0_40px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_50px_rgba(239,68,68,0.08)]">
                 <h3 class="mb-4 text-xl font-semibold text-white">
                     {{ __('home.services_card_gearbox_title') }}
                 </h3>
@@ -1612,7 +1621,7 @@
                 </p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-8 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-8 shadow-[0_0_40px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_50px_rgba(239,68,68,0.08)]">
                 <h3 class="mb-4 text-xl font-semibold text-white">
                     {{ __('home.services_card_special_title') }}
                 </h3>
@@ -1623,11 +1632,11 @@
         </div>
 
         <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.14)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01]">
+            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(239,68,68,0.24)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02]">
                 {{ __('home.services_primary_button') }}
             </a>
 
-            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
+            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]">
                 {{ __('home.services_secondary_button') }}
             </a>
         </div>
@@ -1635,13 +1644,13 @@
 </section>
 
 <section class="relative overflow-hidden bg-[#05070b] py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.04),transparent_38%)]"></div>
-    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.07),transparent_38%)]"></div>
+    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 
-    <div class="relative mx-auto max-w-[1440px] px-6 lg:px-10">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/[0.08] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_14px_rgba(239,68,68,0.04)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                 {{ app()->getLocale() === 'de' ? 'Machbare Optionen' : 'Available Options' }}
             </div>
 
@@ -1658,7 +1667,7 @@
 
         <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             @foreach ($tuningOptions as $option)
-                <div class="rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-6 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+                <div class="rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-6 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_45px_rgba(239,68,68,0.08)]">
                     <h3 class="text-xl font-semibold text-white">
                         {{ $option['title'] }}
                     </h3>
@@ -1672,13 +1681,13 @@
 </section>
 
 <section id="expertise" class="relative overflow-hidden bg-[#05070b] py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_right_top,rgba(239,68,68,0.04),transparent_30%)]"></div>
-    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_right_top,rgba(239,68,68,0.06),transparent_30%)]"></div>
+    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 
-    <div class="relative mx-auto max-w-[1440px] px-6 lg:px-10">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/[0.08] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_14px_rgba(239,68,68,0.04)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                 {{ __('home.expertise_kicker') }}
             </div>
 
@@ -1688,22 +1697,22 @@
         </div>
 
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-7 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-7 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30">
                 <h3 class="text-xl font-semibold text-white">{{ __('home.expertise_1_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.expertise_1_text') }}</p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-7 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-7 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30">
                 <h3 class="text-xl font-semibold text-white">{{ __('home.expertise_2_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.expertise_2_text') }}</p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-7 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-7 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30">
                 <h3 class="text-xl font-semibold text-white">{{ __('home.expertise_3_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.expertise_3_text') }}</p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-7 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-7 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30">
                 <h3 class="text-xl font-semibold text-white">{{ __('home.expertise_4_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.expertise_4_text') }}</p>
             </div>
@@ -1712,13 +1721,13 @@
 </section>
 
 <section id="workflow" class="relative overflow-hidden bg-black py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_left_bottom,rgba(239,68,68,0.03),transparent_30%)]"></div>
-    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_left_bottom,rgba(239,68,68,0.05),transparent_30%)]"></div>
+    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 
-    <div class="relative mx-auto max-w-[1440px] px-6 lg:px-10">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/[0.08] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_14px_rgba(239,68,68,0.04)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                 {{ __('home.workflow_kicker') }}
             </div>
 
@@ -1728,25 +1737,25 @@
         </div>
 
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-6 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-6 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30">
                 <div class="mb-4 text-sm font-bold tracking-[0.2em] text-red-400">01</div>
                 <h3 class="text-xl font-semibold text-white">{{ __('home.workflow_step_1_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.workflow_step_1_text') }}</p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-6 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-6 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30">
                 <div class="mb-4 text-sm font-bold tracking-[0.2em] text-red-400">02</div>
                 <h3 class="text-xl font-semibold text-white">{{ __('home.workflow_step_2_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.workflow_step_2_text') }}</p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-6 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-6 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30">
                 <div class="mb-4 text-sm font-bold tracking-[0.2em] text-red-400">03</div>
                 <h3 class="text-xl font-semibold text-white">{{ __('home.workflow_step_3_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.workflow_step_3_text') }}</p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-6 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-6 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30">
                 <div class="mb-4 text-sm font-bold tracking-[0.2em] text-red-400">04</div>
                 <h3 class="text-xl font-semibold text-white">{{ __('home.workflow_step_4_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.workflow_step_4_text') }}</p>
@@ -1756,13 +1765,13 @@
 </section>
 
 <section id="why-us" class="relative overflow-hidden bg-[#05070b] py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_right_center,rgba(239,68,68,0.04),transparent_30%)]"></div>
-    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_right_center,rgba(239,68,68,0.06),transparent_30%)]"></div>
+    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 
-    <div class="relative mx-auto max-w-[1440px] px-6 lg:px-10">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/[0.08] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_14px_rgba(239,68,68,0.04)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                 {{ __('home.why_kicker') }}
             </div>
 
@@ -1772,28 +1781,28 @@
         </div>
 
         <div class="grid gap-6 md:grid-cols-2">
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-8 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-8 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_45px_rgba(239,68,68,0.07)]">
                 <h3 class="text-xl font-semibold text-white">{{ __('home.why_1_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.why_1_text') }}</p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-8 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-8 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_45px_rgba(239,68,68,0.07)]">
                 <h3 class="text-xl font-semibold text-white">{{ __('home.why_2_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.why_2_text') }}</p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-8 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-8 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_45px_rgba(239,68,68,0.07)]">
                 <h3 class="text-xl font-semibold text-white">{{ __('home.why_3_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.why_3_text') }}</p>
             </div>
 
-            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] p-8 shadow-[0_0_18px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/20">
+            <div class="rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] p-8 shadow-[0_0_35px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:border-red-500/30 hover:shadow-[0_0_45px_rgba(239,68,68,0.07)]">
                 <h3 class="text-xl font-semibold text-white">{{ __('home.why_4_title') }}</h3>
                 <p class="mt-4 leading-8 text-slate-400">{{ __('home.why_4_text') }}</p>
             </div>
         </div>
 
-        <div class="mt-10 rounded-[2rem] border border-red-500/12 bg-gradient-to-r from-red-600/[0.08] via-transparent to-transparent p-6 shadow-[0_0_20px_rgba(239,68,68,0.025)] ring-1 ring-white/5 backdrop-blur-xl sm:p-8">
+        <div class="mt-10 rounded-[2rem] border border-red-500/15 bg-gradient-to-r from-red-600/10 via-transparent to-transparent p-6 shadow-[0_0_50px_rgba(239,68,68,0.05)] ring-1 ring-white/5 backdrop-blur-xl sm:p-8">
             <div class="flex flex-col gap-5 lg:flex-row lg:items-center lg:justify-between">
                 <div class="max-w-2xl">
                     <div class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-red-400">
@@ -1808,11 +1817,11 @@
                 </div>
 
                 <div class="flex flex-col gap-3 sm:flex-row">
-                    <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.14)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01]">
+                    <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(239,68,68,0.24)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02]">
                         {{ __('home.cta_button_primary') }}
                     </a>
 
-                    <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
+                    <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]">
                         {{ __('home.cta_button_secondary') }}
                     </a>
                 </div>
@@ -1822,13 +1831,13 @@
 </section>
 
 <section class="relative overflow-hidden bg-black py-24">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.03),transparent_36%)]"></div>
-    <div class="absolute inset-0 opacity-[0.01] kk-grid-premium-soft"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.05),transparent_36%)]"></div>
+    <div class="absolute inset-0 opacity-[0.015] kk-grid-premium-soft"></div>
 
-    <div class="relative mx-auto max-w-[1440px] px-6 lg:px-10">
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div class="mb-12 max-w-3xl">
-            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/[0.08] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_14px_rgba(239,68,68,0.04)]">
-                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+            <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
+                <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                 {{ app()->getLocale() === 'de' ? 'FAQ' : 'FAQ' }}
             </div>
 
@@ -1849,7 +1858,7 @@
                 class="space-y-4"
             >
                 @foreach ($faqItems as $index => $faq)
-                    <div class="overflow-hidden rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-white/[0.04] via-white/[0.025] to-red-500/[0.015] shadow-[0_0_16px_rgba(239,68,68,0.02)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:border-red-500/20">
+                    <div class="overflow-hidden rounded-[1.6rem] border border-white/10 bg-gradient-to-br from-white/[0.05] via-white/[0.03] to-red-500/[0.02] shadow-[0_0_32px_rgba(239,68,68,0.03)] ring-1 ring-white/5 backdrop-blur-xl transition duration-300 hover:border-red-500/25">
                         <button
                             type="button"
                             @click="open = open === {{ $index }} ? -1 : {{ $index }}"
@@ -1861,7 +1870,7 @@
 
                             <span
                                 class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-lg text-white transition duration-300"
-                                :class="open === {{ $index }} ? 'rotate-45 border-red-500/20 bg-red-500/[0.06] text-red-300' : ''"
+                                :class="open === {{ $index }} ? 'rotate-45 border-red-500/30 bg-red-500/[0.08] text-red-300' : ''"
                             >
                                 +
                             </span>
@@ -1888,7 +1897,7 @@
             </div>
 
             <div class="h-full">
-                <div class="sticky top-28 rounded-[2rem] border border-red-500/12 bg-gradient-to-br from-red-600/[0.08] via-white/[0.03] to-transparent p-7 shadow-[0_0_20px_rgba(239,68,68,0.025)] ring-1 ring-white/5 backdrop-blur-xl">
+                <div class="sticky top-28 rounded-[2rem] border border-red-500/15 bg-gradient-to-br from-red-600/10 via-white/[0.03] to-transparent p-7 shadow-[0_0_50px_rgba(239,68,68,0.05)] ring-1 ring-white/5 backdrop-blur-xl">
                     <div class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-red-400">
                         {{ app()->getLocale() === 'de' ? 'Direkte Klärung' : 'Direct Clarification' }}
                     </div>
@@ -1916,11 +1925,11 @@
                     </div>
 
                     <div class="mt-7 flex flex-col gap-3">
-                        <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
+                        <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.07]">
                             {{ app()->getLocale() === 'de' ? 'Projekt besprechen' : 'Discuss Project' }}
                         </a>
 
-                        <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.14)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01]">
+                        <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(239,68,68,0.24)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02]">
                             {{ app()->getLocale() === 'de' ? 'Direkt starten' : 'Start Directly' }}
                         </a>
                     </div>
@@ -1931,8 +1940,8 @@
 </section>
 
 <section class="bg-black py-24">
-    <div class="mx-auto max-w-[1440px] px-6 lg:px-10">
-        <div class="rounded-3xl border border-red-500/12 bg-gradient-to-r from-red-600/[0.08] to-black p-8 shadow-[0_0_24px_rgba(239,68,68,0.025)] ring-1 ring-white/5 sm:p-10 lg:p-12">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="rounded-3xl border border-red-500/20 bg-gradient-to-r from-red-600/10 to-black p-8 shadow-[0_0_70px_rgba(239,68,68,0.05)] ring-1 ring-white/5 sm:p-10 lg:p-12">
             <h2 class="mb-6 text-3xl font-bold tracking-[-0.03em] text-white sm:text-4xl">
                 {{ __('home.cta_title') }}
             </h2>
@@ -1942,23 +1951,23 @@
             </p>
 
             <div class="flex flex-col gap-3 sm:flex-row sm:gap-4">
-                <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.14)] ring-1 ring-red-400/12 transition hover:bg-red-500 sm:text-base">
+                <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-red-600/30 ring-1 ring-red-400/20 transition hover:bg-red-500 sm:text-base">
                     {{ __('home.cta_button_primary') }}
                 </a>
 
-                <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-xl border border-white/15 bg-white/[0.02] px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/[0.05] sm:text-base">
+                <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/[0.02] px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10 sm:text-base">
                     {{ __('home.cta_button_secondary') }}
                 </a>
             </div>
 
             <div class="mt-6 grid gap-3 text-sm text-slate-300 sm:grid-cols-3">
-                <div class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                     {{ __('home.cta_point_1') }}
                 </div>
-                <div class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                     {{ __('home.cta_point_2') }}
                 </div>
-                <div class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                     {{ __('home.cta_point_3') }}
                 </div>
             </div>
@@ -1967,12 +1976,12 @@
 </section>
 
 <section class="relative bg-black pb-28 lg:pb-40">
-    <div class="mx-auto max-w-[1440px] px-6 lg:px-10">
-        <div class="overflow-hidden rounded-[2rem] border border-red-500/12 bg-gradient-to-br from-white/[0.04] via-white/[0.02] to-red-500/[0.015] shadow-[0_0_24px_rgba(239,68,68,0.025)] ring-1 ring-white/5 backdrop-blur-xl">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="overflow-hidden rounded-[2rem] border border-red-500/15 bg-gradient-to-br from-white/[0.04] via-white/[0.02] to-red-500/[0.03] shadow-[0_0_80px_rgba(239,68,68,0.06)] ring-1 ring-white/5 backdrop-blur-xl">
             <div class="grid items-center gap-8 p-8 lg:grid-cols-[1.1fr_0.9fr] lg:p-10">
                 <div>
-                    <div class="inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/[0.08] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_14px_rgba(239,68,68,0.04)]">
-                        <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
+                    <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_26px_rgba(239,68,68,0.06)]">
+                        <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
                         {{ __('home.evc_kicker') }}
                     </div>
 
@@ -1986,32 +1995,32 @@
                     </p>
 
                     <div class="mt-6 flex flex-wrap gap-3">
-                        <div class="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                        <div class="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                             {{ __('home.evc_point_1') }}
                         </div>
-                        <div class="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                        <div class="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                             {{ __('home.evc_point_2') }}
                         </div>
-                        <div class="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]">
+                        <div class="rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.03)]">
                             {{ __('home.evc_point_3') }}
                         </div>
                     </div>
 
                     <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-                        <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
+                        <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.06]">
                             {{ __('home.evc_primary_button') }}
                         </a>
 
-                        <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.14)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01]">
+                        <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_16px_40px_rgba(239,68,68,0.24)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02]">
                             {{ __('home.evc_secondary_button') }}
                         </a>
                     </div>
                 </div>
 
                 <div class="relative">
-                    <div class="absolute -inset-3 rounded-[2rem] bg-red-600/[0.04] blur-3xl"></div>
+                    <div class="absolute -inset-4 rounded-[2rem] bg-red-600/10 blur-3xl"></div>
 
-                    <div class="relative rounded-[1.75rem] border border-white/10 bg-black/50 p-6 shadow-[0_0_18px_rgba(239,68,68,0.03)] ring-1 ring-white/5">
+                    <div class="relative rounded-[1.75rem] border border-white/10 bg-black/50 p-6 shadow-[0_0_40px_rgba(239,68,68,0.08)] ring-1 ring-white/5">
                         <div class="mb-5 flex items-center justify-between">
                             <div>
                                 <div class="text-xs font-semibold uppercase tracking-[0.22em] text-red-400">
@@ -2031,12 +2040,12 @@
                             href="https://www.evc.de/de/check_evc_license.asp?k=R0%2bTo6BmTg3nQ62jyahIXw%3d%3d"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="group flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]"
+                            class="group flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition duration-300 hover:border-red-500/40 hover:bg-white/[0.05] hover:shadow-[0_0_30px_rgba(239,68,68,0.10)]"
                         >
                             <img
                                 src="https://www.evc.de/common/check_evc_license_image.asp?k=R0%2bTo6BmTg3nQ62jyahIXw%3d%3d"
                                 alt="EVC WinOLS Lizenzprüfung"
-                                class="h-auto max-w-full transition duration-300 group-hover:scale-[1.01]"
+                                class="h-auto max-w-full transition duration-300 group-hover:scale-[1.02]"
                                 loading="lazy"
                                 decoding="async"
                             >
@@ -2087,7 +2096,7 @@
                 x-transition:leave-start="opacity-100 translate-y-0 scale-100"
                 x-transition:leave-end="opacity-0 translate-y-2 scale-[0.98]"
                 @click.outside="waOpen = false"
-                class="mb-3 ml-auto w-full max-w-md overflow-hidden rounded-[1.5rem] border border-white/8 bg-[#07090d]/40 p-3 shadow-[0_12px_28px_rgba(0,0,0,0.16)] ring-1 ring-white/5 backdrop-blur-xl"
+                class="mb-3 ml-auto w-full max-w-md overflow-hidden rounded-[1.5rem] border border-white/8 bg-[#07090d]/40 p-3 shadow-[0_16px_40px_rgba(0,0,0,0.20)] ring-1 ring-white/5 backdrop-blur-xl"
                 style="display: none;"
             >
                 <div class="px-2 pb-3 pt-1">
@@ -2100,26 +2109,26 @@
                 </div>
 
                 <div class="grid gap-2">
-                    <a href="{{ $waGeneralLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm text-slate-200 transition duration-300 hover:border-green-400/20 hover:bg-white/[0.05]">
+                    <a href="{{ $waGeneralLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm text-slate-200 transition duration-300 hover:border-green-400/30 hover:bg-white/[0.05]">
                         {{ app()->getLocale() === 'de' ? 'Allgemeine Anfrage' : 'General inquiry' }}
                     </a>
 
-                    <a href="{{ $waStageLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm text-slate-200 transition duration-300 hover:border-green-400/20 hover:bg-white/[0.05]">
+                    <a href="{{ $waStageLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm text-slate-200 transition duration-300 hover:border-green-400/30 hover:bg-white/[0.05]">
                         {{ app()->getLocale() === 'de' ? 'Stage Anfrage' : 'Stage inquiry' }}
                     </a>
 
-                    <a href="{{ $waGearboxLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm text-slate-200 transition duration-300 hover:border-green-400/20 hover:bg-white/[0.05]">
+                    <a href="{{ $waGearboxLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm text-slate-200 transition duration-300 hover:border-green-400/30 hover:bg-white/[0.05]">
                         {{ app()->getLocale() === 'de' ? 'Getriebeoptimierung' : 'Gearbox optimization' }}
                     </a>
 
-                    <a href="{{ $waSpecialLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm text-slate-200 transition duration-300 hover:border-green-400/20 hover:bg-white/[0.05]">
+                    <a href="{{ $waSpecialLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/8 bg-white/[0.025] px-4 py-3 text-sm text-slate-200 transition duration-300 hover:border-green-400/30 hover:bg-white/[0.05]">
                         {{ app()->getLocale() === 'de' ? 'Sonderprojekt' : 'Special project' }}
                     </a>
                 </div>
             </div>
 
-            <div class="overflow-hidden rounded-[1.75rem] border border-white/7 bg-[#07090d]/22 shadow-[0_10px_24px_rgba(0,0,0,0.14)] ring-1 ring-white/5 backdrop-blur-lg">
-                <div class="bg-[linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01))]">
+            <div class="overflow-hidden rounded-[1.75rem] border border-white/7 bg-[#07090d]/22 shadow-[0_12px_34px_rgba(0,0,0,0.16)] ring-1 ring-white/5 backdrop-blur-lg">
+                <div class="bg-[linear-gradient(180deg,rgba(255,255,255,0.035),rgba(255,255,255,0.01))]">
                     <div class="flex flex-col gap-4 p-4 lg:flex-row lg:items-center lg:justify-between lg:px-5">
                         <div>
                             <div class="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-red-300">
@@ -2131,18 +2140,18 @@
                         </div>
 
                         <div class="grid gap-3 sm:grid-cols-3 lg:min-w-[520px]">
-                            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_10px_22px_rgba(239,68,68,0.12)] ring-1 ring-red-400/12 transition duration-300 hover:scale-[1.01]">
+                            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-5 py-3 text-sm font-semibold text-white shadow-[0_12px_24px_rgba(239,68,68,0.14)] ring-1 ring-red-400/15 transition duration-300 hover:scale-[1.02]">
                                 {{ app()->getLocale() === 'de' ? 'Registrieren' : 'Register' }}
                             </a>
 
-                            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/8 bg-white/[0.025] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.05]">
+                            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-2xl border border-white/8 bg-white/[0.025] px-5 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.05]">
                                 {{ app()->getLocale() === 'de' ? 'Kontakt' : 'Contact' }}
                             </a>
 
                             <button
                                 type="button"
                                 @click="waOpen = !waOpen"
-                                class="inline-flex items-center justify-center rounded-2xl border border-green-400/14 bg-green-500/[0.06] px-5 py-3 text-sm font-semibold text-green-300 transition duration-300 hover:border-green-400/22 hover:bg-green-500/[0.08]"
+                                class="inline-flex items-center justify-center rounded-2xl border border-green-400/16 bg-green-500/[0.06] px-5 py-3 text-sm font-semibold text-green-300 transition duration-300 hover:border-green-400/28 hover:bg-green-500/[0.10]"
                             >
                                 WhatsApp
                             </button>
@@ -2173,7 +2182,7 @@
             x-transition:leave="transition ease-in duration-180"
             x-transition:leave-start="translate-y-0"
             x-transition:leave-end="translate-y-full"
-            class="absolute inset-x-0 bottom-0 rounded-t-[2rem] border-t border-white/10 bg-[#07090d]/94 p-5 shadow-[0_-16px_42px_rgba(0,0,0,0.28)] backdrop-blur-2xl"
+            class="absolute inset-x-0 bottom-0 rounded-t-[2rem] border-t border-white/10 bg-[#07090d]/94 p-5 shadow-[0_-20px_60px_rgba(0,0,0,0.35)] backdrop-blur-2xl"
         >
             <div class="mx-auto max-w-md">
                 <div class="mx-auto mb-4 h-1.5 w-16 rounded-full bg-white/15"></div>
@@ -2187,19 +2196,19 @@
                 </div>
 
                 <div class="mt-5 grid gap-3">
-                    <a href="{{ $waGeneralLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm font-medium text-slate-200 transition duration-300 hover:border-green-400/20 hover:bg-white/[0.06]">
+                    <a href="{{ $waGeneralLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm font-medium text-slate-200 transition duration-300 hover:border-green-400/30 hover:bg-white/[0.06]">
                         {{ app()->getLocale() === 'de' ? 'Allgemeine Anfrage' : 'General inquiry' }}
                     </a>
 
-                    <a href="{{ $waStageLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm font-medium text-slate-200 transition duration-300 hover:border-green-400/20 hover:bg-white/[0.06]">
+                    <a href="{{ $waStageLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm font-medium text-slate-200 transition duration-300 hover:border-green-400/30 hover:bg-white/[0.06]">
                         {{ app()->getLocale() === 'de' ? 'Stage Anfrage' : 'Stage inquiry' }}
                     </a>
 
-                    <a href="{{ $waGearboxLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm font-medium text-slate-200 transition duration-300 hover:border-green-400/20 hover:bg-white/[0.06]">
+                    <a href="{{ $waGearboxLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm font-medium text-slate-200 transition duration-300 hover:border-green-400/30 hover:bg-white/[0.06]">
                         {{ app()->getLocale() === 'de' ? 'Getriebeoptimierung' : 'Gearbox optimization' }}
                     </a>
 
-                    <a href="{{ $waSpecialLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm font-medium text-slate-200 transition duration-300 hover:border-green-400/20 hover:bg-white/[0.06]">
+                    <a href="{{ $waSpecialLink }}" target="_blank" rel="noopener noreferrer" class="rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-4 text-sm font-medium text-slate-200 transition duration-300 hover:border-green-400/30 hover:bg-white/[0.06]">
                         {{ app()->getLocale() === 'de' ? 'Sonderprojekt' : 'Special project' }}
                     </a>
 
@@ -2227,18 +2236,18 @@
         style="display: none;"
     >
         <div class="mx-auto grid max-w-7xl grid-cols-3 gap-3">
-            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/20 hover:bg-white/[0.06]">
+            <a href="{{ route('contact.create') }}" class="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 text-sm font-semibold text-white transition duration-300 hover:border-red-500/30 hover:bg-white/[0.08]">
                 {{ __('home.mobile_sticky_contact') }}
             </a>
 
-            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-4 py-3 text-sm font-semibold text-white shadow-[0_10px_22px_rgba(239,68,68,0.14)] ring-1 ring-red-400/12">
+            <a href="https://kk-boostfileservice.de/register" class="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-4 py-3 text-sm font-semibold text-white shadow-[0_16px_36px_rgba(239,68,68,0.25)] ring-1 ring-red-400/15">
                 {{ __('home.mobile_sticky_register') }}
             </a>
 
             <button
                 type="button"
                 @click="mobileWaOpen = true"
-                class="inline-flex items-center justify-center rounded-xl border border-green-400/14 bg-green-500/[0.08] px-4 py-3 text-sm font-semibold text-green-300"
+                class="inline-flex items-center justify-center rounded-xl border border-green-400/18 bg-green-500/[0.08] px-4 py-3 text-sm font-semibold text-green-300"
             >
                 WhatsApp
             </button>
