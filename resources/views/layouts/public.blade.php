@@ -78,7 +78,7 @@
         <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.06),transparent_18%),radial-gradient(circle_at_bottom_right,rgba(220,38,38,0.06),transparent_22%),linear-gradient(180deg,#05070b_0%,#04060a_45%,#05070b_100%)] kk-mobile-lite-radial"></div>
         <div class="absolute inset-0 -z-10 opacity-[0.015] kk-grid-premium kk-mobile-lite-overlay"></div>
 
-        <header x-data="{ mobileMenuOpen: false }" class="sticky top-0 z-50 border-b border-white/10 bg-[#07090d]/78 backdrop-blur-xl kk-mobile-lite-blur">
+        <header x-data="{ mobileMenuOpen: false }" class="sticky top-0 z-50 border-b border-white/8 bg-[#07090d]/82 backdrop-blur-lg kk-mobile-lite-blur">
             <div class="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-red-500/15 to-transparent"></div>
 
             <div class="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-4 lg:px-10">
@@ -128,7 +128,7 @@
                     </a>
 
                     <a href="https://kk-boostfileservice.de/register"
-                       class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.16)] transition duration-300 hover:scale-[1.02] hover:shadow-[0_12px_28px_rgba(239,68,68,0.20)]">
+                       class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_18px_rgba(239,68,68,0.12)] transition duration-300 hover:scale-[1.01] hover:shadow-[0_10px_22px_rgba(239,68,68,0.16)]">
                         {{ __('home.nav_register') }}
                     </a>
                 </div>
@@ -162,7 +162,7 @@
                 style="display: none;"
             >
                 <div class="mx-auto max-w-[1440px] px-6 py-5 lg:px-10">
-                    <div class="overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-[#0b0f14]/95 via-[#090c11]/95 to-[#13080a]/95 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.24)] backdrop-blur-xl kk-mobile-lite-blur kk-mobile-lite-shadow">
+                    <div class="overflow-hidden rounded-[1.75rem] border border-white/10 bg-gradient-to-br from-[#0b0f14]/95 via-[#090c11]/95 to-[#13080a]/95 p-5 shadow-[0_10px_24px_rgba(0,0,0,0.18)] backdrop-blur-xl kk-mobile-lite-blur kk-mobile-lite-shadow">
                         <div class="flex flex-col gap-2">
                             <a @click="mobileMenuOpen = false" href="{{ route('home') }}#services" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 transition duration-300 hover:bg-white/5 hover:text-red-300">{{ __('home.nav_services') }}</a>
                             <a @click="mobileMenuOpen = false" href="{{ route('home') }}#expertise" class="rounded-xl px-4 py-3 text-sm font-semibold text-slate-200 transition duration-300 hover:bg-white/5 hover:text-red-300">{{ __('home.nav_expertise') }}</a>
@@ -193,7 +193,7 @@
                             </a>
 
                             <a href="https://kk-boostfileservice.de/register"
-                               class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(239,68,68,0.16)] transition duration-300 hover:scale-[1.02]">
+                               class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-red-600 via-red-500 to-orange-500 px-6 py-3 text-sm font-semibold text-white shadow-[0_8px_18px_rgba(239,68,68,0.12)] transition duration-300 hover:scale-[1.01]">
                                 {{ __('home.nav_register') }}
                             </a>
                         </div>
@@ -214,7 +214,7 @@
                 <div class="grid gap-14 md:grid-cols-4">
                     <div class="md:col-span-2">
                         <div class="flex items-center gap-4">
-                            <div class="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] via-white/[0.03] to-red-500/[0.04] ring-1 ring-white/5 shadow-[0_10px_24px_rgba(0,0,0,0.22)] kk-mobile-lite-shadow">
+                            <div class="relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.06] via-white/[0.03] to-red-500/[0.04] ring-1 ring-white/5 shadow-[0_8px_18px_rgba(0,0,0,0.16)] kk-mobile-lite-shadow">
                                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(239,68,68,0.08),transparent_55%)] opacity-70 kk-mobile-lite-radial"></div>
                                 <img
                                     src="{{ asset('images/branding/kk-boost-logo.png') }}"
