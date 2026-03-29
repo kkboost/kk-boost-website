@@ -913,28 +913,34 @@
         <source src="{{ asset('videos/hero.mp4') }}" type="video/mp4">
     </video>
 
-    <div class="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-black"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.10),transparent_58%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.04),transparent_30%)]"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/95 via-black/82 to-black"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.08),transparent_58%)]"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.035),transparent_30%)]"></div>
     <div class="absolute inset-0 opacity-[0.014] kk-grid-premium"></div>
 
     <div class="relative z-10 mx-auto flex min-h-[100svh] max-w-[1440px] items-center px-6 pb-12 pt-28 sm:pt-32 lg:px-10 lg:pb-20 lg:pt-36">
-        <div class="grid w-full items-center gap-10 lg:grid-cols-[1.08fr_0.92fr]">
+        <div class="grid w-full items-center gap-10 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14">
             <div class="max-w-3xl">
                 <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-red-500/15 bg-red-600/[0.08] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-red-300 backdrop-blur-md shadow-[0_0_16px_rgba(239,68,68,0.05)] sm:text-sm">
                     <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_8px_rgba(239,68,68,0.55)]"></span>
                     {{ __('home.hero_badge') }}
                 </div>
 
-                <h1 class="max-w-4xl text-4xl font-bold leading-[0.98] tracking-[-0.045em] text-white sm:text-5xl lg:text-[4.5rem]">
-                    {{ __('home.hero_title_1') }}<br>
-                    <span class="text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.18)]">
+                <h1 class="max-w-4xl text-[2.9rem] font-semibold tracking-[-0.05em] text-white sm:text-[4.15rem] lg:text-[5.35rem]">
+                    <span class="block leading-[0.96]">
+                        {{ __('home.hero_title_1') }}
+                    </span>
+
+                    <span class="mt-2 block leading-[1.08] text-red-500 [text-shadow:0_0_22px_rgba(239,68,68,0.16)] sm:mt-3">
                         {{ __('home.hero_title_2') }}
-                    </span><br>
-                    {{ __('home.hero_title_3') }}
+                    </span>
+
+                    <span class="mt-2 block leading-[0.98] text-white/96 sm:mt-3">
+                        {{ __('home.hero_title_3') }}
+                    </span>
                 </h1>
 
-                <p class="mt-7 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg sm:leading-8">
+                <p class="mt-8 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg sm:leading-8">
                     {{ __('home.hero_intro_premium') }}
                 </p>
 
