@@ -913,7 +913,7 @@
         <source src="{{ asset('videos/hero.mp4') }}" type="video/mp4">
     </video>
 
-    <div class="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-black"></div>
+   <div class="absolute inset-0 bg-gradient-to-b from-black/95 via-black/80 to-black"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.08),transparent_58%)]"></div>
     <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.035),transparent_30%)]"></div>
     <div class="absolute inset-0 opacity-[0.014] kk-grid-premium"></div>
@@ -926,12 +926,18 @@
                     {{ __('home.hero_badge') }}
                 </div>
 
-                <h1 class="max-w-4xl text-4xl font-bold leading-[0.98] tracking-[-0.045em] text-white sm:text-5xl lg:text-[4.5rem]">
-    {{ __('home.hero_title_1') }}<br>
-    <span class="text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.18)]">
+                <h1 class="max-w-4xl text-4xl font-bold tracking-[-0.045em] text-white sm:text-5xl lg:text-[4.5rem]">
+    <span class="block leading-[0.98]">
+        {{ __('home.hero_title_1') }}
+    </span>
+
+    <span class="block leading-[1.08] text-red-500 drop-shadow-[0_0_10px_rgba(239,68,68,0.18)]">
         {{ __('home.hero_title_2') }}
-    </span><br>
-    {{ __('home.hero_title_3') }}
+    </span>
+
+    <span class="block leading-[0.98]">
+        {{ __('home.hero_title_3') }}
+    </span>
 </h1>
                 <p class="mt-8 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg sm:leading-8">
                     {{ __('home.hero_intro_premium') }}
@@ -1127,7 +1133,7 @@
             </div>
 
            <div class="lg:hidden">
-    <div class="rounded-[1.75rem] border border-white/10 bg-black/18 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.18)] ring-1 ring-white/5 backdrop-blur-md">
+    <div class="rounded-[1.75rem] border border-white/10 bg-black/30 p-5 shadow-[0_14px_34px_rgba(0,0,0,0.22)] ring-1 ring-white/5 backdrop-blur-2xl">
                     <div class="flex items-center justify-between border-b border-white/10 pb-4">
                         <div>
                             <div class="text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-red-400">
