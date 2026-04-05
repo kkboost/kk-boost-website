@@ -74,7 +74,7 @@
 </head>
 <body class="bg-[#05070b] text-white antialiased selection:bg-red-500 selection:text-white">
 
-    <div class="relative min-h-screen overflow-hidden bg-[#05070b]">
+    <div class="relative min-h-screen overflow-x-hidden bg-[#05070b]">
         <div class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.06),transparent_18%),radial-gradient(circle_at_bottom_right,rgba(220,38,38,0.06),transparent_22%),linear-gradient(180deg,#05070b_0%,#04060a_45%,#05070b_100%)] kk-mobile-lite-radial"></div>
         <div class="absolute inset-0 -z-10 opacity-[0.015] kk-grid-premium kk-mobile-lite-overlay"></div>
 
@@ -202,7 +202,7 @@
             </div>
         </header>
 
-        <main>
+        <main class="relative z-10">
             @yield('content')
         </main>
 
