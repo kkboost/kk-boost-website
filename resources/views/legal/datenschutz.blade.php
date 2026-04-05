@@ -5,12 +5,12 @@
 
 @section('content')
 
-<section class="relative overflow-hidden bg-[#05070b] py-24 sm:py-28">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.08),transparent_20%),radial-gradient(circle_at_bottom_right,rgba(239,68,68,0.06),transparent_24%),linear-gradient(180deg,#05070b_0%,#06080d_45%,#05070b_100%)]"></div>
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_30%)]"></div>
-    <div class="absolute inset-0 opacity-[0.012] kk-grid-premium-soft"></div>
+<section class="relative isolate overflow-hidden bg-[#05070b] py-28 sm:py-32">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,rgba(239,68,68,0.08),transparent_20%),radial-gradient(circle_at_bottom_right,rgba(239,68,68,0.06),transparent_24%),linear-gradient(180deg,#05070b_0%,#06080d_45%,#05070b_100%)]"></div>
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.03),transparent_30%)]"></div>
+    <div class="absolute inset-0 -z-10 opacity-[0.012] kk-grid-premium-soft"></div>
 
-    <div class="relative mx-auto max-w-5xl px-6 lg:px-8">
+    <div class="relative z-10 mx-auto max-w-5xl px-6 lg:px-8">
         <div class="max-w-3xl">
             <div class="inline-flex items-center gap-2 rounded-full border border-red-500/20 bg-red-600/10 px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.2em] text-red-300 shadow-[0_0_20px_rgba(239,68,68,0.05)]">
                 <span class="h-2 w-2 rounded-full bg-red-500 shadow-[0_0_12px_rgba(239,68,68,0.9)]"></span>
@@ -42,7 +42,7 @@
                     @endforeach
 
                     @if(!empty($section['list']))
-                        <ul class="mt-4 space-y-3 pl-6 text-slate-300 marker:text-red-400 list-disc">
+                        <ul class="mt-4 list-disc space-y-3 pl-6 text-slate-300 marker:text-red-400">
                             @foreach($section['list'] as $item)
                                 <li>{{ $item }}</li>
                             @endforeach
