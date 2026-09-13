@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'whatsapp' => [
+        // International format, digits only (for example: 971501234567).
+        'number' => env('WHATSAPP_NUMBER', '4915566180004'),
+    ],
+
 ];
