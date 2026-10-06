@@ -1,19 +1,20 @@
 @extends('layouts.public')
 
-@section('title', 'KK-BOOST REMAPPING')
+@section('title', 'kk-boost.com')
 @section('meta_description', __('home.meta_description'))
+@section('robots', 'index,follow,nosnippet')
 
 @section('head')
     @php
         $homeSchema = [
             '@context' => 'https://schema.org',
             '@type' => 'WebPage',
-            'name' => __('home.meta_title'),
+            'name' => 'kk-boost.com',
             'description' => __('home.meta_description'),
             'url' => url()->current(),
             'isPartOf' => [
                 '@type' => 'WebSite',
-                'name' => 'KK-BOOST',
+                'name' => 'kk-boost.com',
                 'url' => url('/'),
             ],
             'about' => [
